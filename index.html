@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shrijee Aqua Enterprises - Enterprise Telemetry &amp; Logistics</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Space Grotesk, Manrope, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#9bccf6",
+            "outline-variant": "#bfc7d2",
+            "tertiary": "#006947",
+            "surface-container-high": "#e2e7ff",
+            "surface-bright": "#faf8ff",
+            "on-secondary-fixed": "#001e30",
+            "inverse-primary": "#93ccff",
+            "on-primary-fixed": "#001d31",
+            "surface-container-highest": "#dae2fd",
+            "secondary": "#2f6388",
+            "tertiary-fixed": "#6ffbbe",
+            "tertiary-container": "#00855b",
+            "on-tertiary": "#ffffff",
+            "background": "#faf8ff",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#4edea3",
+            "error": "#ba1a1a",
+            "on-error-container": "#93000a",
+            "surface-container": "#eaedff",
+            "outline": "#707881",
+            "on-background": "#131b2e",
+            "on-secondary-fixed-variant": "#0e4b6f",
+            "primary-container": "#007bb9",
+            "primary-fixed": "#cce5ff",
+            "secondary-container": "#a3d4ff",
+            "inverse-surface": "#283044",
+            "on-primary-container": "#fdfcff",
+            "on-tertiary-container": "#f5fff6",
+            "surface-tint": "#006398",
+            "surface": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#005236",
+            "primary": "#006194",
+            "primary-fixed-dim": "#93ccff",
+            "inverse-on-surface": "#eef0ff",
+            "on-surface-variant": "#3f4850",
+            "on-primary-fixed-variant": "#004b73",
+            "error-container": "#ffdad6",
+            "surface-variant": "#dae2fd",
+            "secondary-fixed": "#cbe6ff",
+            "on-primary": "#ffffff",
+            "on-surface": "#131b2e",
+            "surface-container-low": "#f2f3ff",
+            "surface-dim": "#d2d9f4",
+            "on-tertiary-fixed": "#002113",
+            "on-secondary-container": "#275c81",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter-mobile": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Manrope"],
+            "body-sm": ["Manrope"],
+            "headline-md": ["Space Grotesk"],
+            "display-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display-lg": ["Space Grotesk"],
+            "label-caps": ["JetBrains Mono"],
+            "metric-display": ["JetBrains Mono"],
+            "body-lg": ["Manrope"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "body-md": ["Manrope"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "metric-display": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    /* Hide scrollbars for clean industrial dashboard look */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pb-28 selection:bg-secondary-container">
+<!-- TOP APP BAR (Shared Component: TopAppBar with strict content & layout) -->
+<header class="sticky top-0 z-40 bg-surface shadow-sm transition-colors duration-150">
+<div class="flex justify-between items-center w-full px-margin-mobile py-space-sm max-w-full">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<h1 class="text-headline-sm font-headline-sm font-semibold text-primary tracking-tight">Shrijee Aqua</h1>
+<div class="flex items-center gap-1.5">
+<span class="text-label-caps font-label-caps text-on-surface-variant">PIN: 247232 • Sarsawa (Sadpur)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-caps font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          ONLINE
+        </span>
+</div>
+</div>
+<!-- Plant Telemetry Quick Sub-Bar -->
+<div class="px-margin-mobile pb-space-xs flex items-center justify-between text-label-caps font-label-caps bg-surface-container-low py-1">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+        1000 LPH Plant Active
+      </span>
+<span class="text-on-surface-variant font-label-caps">Permeate: 980 L/h</span>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTAINER -->
+<main class="w-full max-w-4xl mx-auto px-margin-mobile mt-space-md space-y-space-md">
+<!-- SEGMENTED CONTROLLER / TAB SWITCHER -->
+<div class="overflow-x-auto no-scrollbar py-1">
+<nav class="flex space-x-1.5 bg-surface-container-high p-1 rounded-xl w-max min-w-full sm:min-w-0" id="tabGroup" role="tablist">
+<button class="tab-btn px-3 py-1.5 rounded-lg text-label-md font-label-md transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5" id="tab-plant-ops" onclick="switchTab('plant-ops')">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+          Plant Ops &amp; Machines
+        </button>
+<button class="tab-btn px-3 py-1.5 rounded-lg text-label-md font-label-md transition-all duration-150 text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" id="tab-campers" onclick="switchTab('campers')">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+          20L Campers
+        </button>
+<button class="tab-btn px-3 py-1.5 rounded-lg text-label-md font-label-md transition-all duration-150 text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" id="tab-packaging" onclick="switchTab('packaging')">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+          Bottle Packaging
+        </button>
+<button class="tab-btn px-3 py-1.5 rounded-lg text-label-md font-label-md transition-all duration-150 text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" id="tab-finance" onclick="switchTab('finance')">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+          Editable Budget &amp; ROI
+        </button>
+</nav>
+</div>
+<!-- TAB 1: PLANT OPS & WATER SPECS SECTION -->
+<section class="tab-pane space-y-space-md block" id="pane-plant-ops">
+<!-- Water Quality Telemetry Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+<!-- Raw Water TDS -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40 shadow-sm relative overflow-hidden">
+<div class="text-label-caps font-label-caps text-on-surface-variant">RAW WATER TDS</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-metric-display font-metric-display text-on-surface">485</span>
+<span class="text-body-sm font-body-sm text-outline">ppm</span>
+</div>
+<div class="mt-2 flex items-center gap-1 text-label-caps font-label-caps text-error">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            High Turbidity / Yamuna Basin
+          </div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-outline-variant"></div>
+</div>
+<!-- Treated Pure Water TDS (Clinical Green Border) -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border-l-4 border-l-tertiary-container border border-outline-variant/40 shadow-sm relative overflow-hidden">
+<div class="text-label-caps font-label-caps text-tertiary font-semibold">TREATED PURE TDS</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-metric-display font-metric-display text-tertiary">92</span>
+<span class="text-body-sm font-body-sm text-tertiary">ppm</span>
+</div>
+<div class="mt-2 flex items-center gap-1 text-label-caps font-label-caps text-tertiary font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Target: 80-120 ppm (Optimal)
+          </div>
+</div>
+<!-- pH Level Neutral -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40 shadow-sm">
+<div class="text-label-caps font-label-caps text-on-surface-variant">PH BALANCE</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-metric-display font-metric-display text-primary">7.4</span>
+<span class="text-body-sm font-body-sm text-outline">pH</span>
+</div>
+<div class="mt-2 flex items-center gap-1 text-label-caps font-label-caps text-primary">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Neutral &amp; Pure Spec
+          </div>
+</div>
+<!-- Sterilization Active -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40 shadow-sm">
+<div class="text-label-caps font-label-caps text-on-surface-variant">STERILIZATION</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-metric-display font-metric-display text-on-surface">100%</span>
+</div>
+<div class="mt-2 flex items-center gap-1 text-label-caps font-label-caps text-tertiary">
+<span class="material-symbols-outlined text-[14px]">sanitizer</span>
+            UV + O3 Recirc Active
+          </div>
+</div>
+</div>
+<!-- Machinery Specs Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Machinery Setup &amp; Filtration Train</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">1000 LPH Commercial RO Unit • Stainless Steel 304 Skid</p>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">STAGE 1 TO 5</span>
+</div>
+<div class="space-y-2.5">
+<!-- Item 1: Raw Water Pump & Sand Filter -->
+<div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex gap-2.5 items-center">
+<span class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-primary text-[14px] font-bold">1</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface">Dual Media Sand Filter (DMF)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Pre-treatment stripping silt, suspended particles &amp; Yamuna riverbed sand (20-30 micron).</div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-surface-container-highest text-primary">2.4 BAR</span>
+</div>
+<!-- Item 2: Activated Carbon Filter -->
+<div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex gap-2.5 items-center">
+<span class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-primary text-[14px] font-bold">2</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface">Activated Carbon Bed (High Iodine)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Eliminates odors, volatile organic pesticides, chlorine, and seasonal river runoff.</div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-surface-container-highest text-primary">NORMAL</span>
+</div>
+<!-- Item 3: Micron Safety Cartridges -->
+<div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex gap-2.5 items-center">
+<span class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-primary text-[14px] font-bold">3</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface">5-Micron &amp; 1-Micron SS Housings</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Final particulate barrier guarding polyamide membranes against micro-debris.</div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed">CLEAN</span>
+</div>
+<!-- Item 4: Antiscalant Dosing + RO Module -->
+<div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex gap-2.5 items-center">
+<span class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-primary text-[14px] font-bold">4</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface">RO Module (4040 TFC Membranes) + Dosing Pump</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">High pressure SS vertical pump; automated antiscalant injection preventing silica fouling.</div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-surface-container-highest text-primary">12.2 BAR</span>
+</div>
+<!-- Item 5: Mineral Infusion & Industrial UV + Corona Ozone -->
+<div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex gap-2.5 items-center">
+<span class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-primary text-[14px] font-bold">5</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface">Ca/Mg Mineral Dosing &amp; UV + Corona O3 Disinfection</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Restores taste and delivers non-chemical ozone preservation for campers &amp; PET bottles.</div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed">OPTIMAL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 2: 20L CAMPER DISTRIBUTION TRACKER -->
+<section class="tab-pane space-y-space-md hidden" id="pane-campers">
+<!-- Daily Tracker Banner -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">DAILY OPERATIONAL GOAL</div>
+<div class="text-headline-md font-headline-md text-on-surface mt-0.5">78 / 100 Campers Dispatched</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">78% TARGET</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-500" style="width: 78%;"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="p-2 rounded bg-surface-container-low">
+<div class="text-label-caps font-label-caps text-on-surface-variant">DISPATCHED</div>
+<div class="text-label-md font-label-md text-primary font-bold">78 Campers</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<div class="text-label-caps font-label-caps text-on-surface-variant">EMPTY RETURNED</div>
+<div class="text-label-md font-label-md text-on-surface font-bold">64 Units</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<div class="text-label-caps font-label-caps text-on-surface-variant">PENDING PILOT</div>
+<div class="text-label-md font-label-md text-tertiary font-bold">22 Units</div>
+</div>
+</div>
+</div>
+<!-- Local Delivery Zones (Sarsawa & Sadpur) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Local Route Clusters (PIN: 247232)</h3>
+<span class="text-label-caps font-label-caps text-outline">E-RICKSHAW 5-8 KM RADIUS</span>
+</div>
+<div class="space-y-2">
+<!-- Zone 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-container-high bg-surface-bright">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">storefront</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Sadpur Main Road Dhabas &amp; Eateries</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Morning supply run • High rotation refill cycle</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-label-md font-label-md font-bold text-on-surface">32 units</div>
+<span class="inline-flex items-center gap-1 text-[11px] text-tertiary font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Delivered
+              </span>
+</div>
+</div>
+<!-- Zone 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-container-high bg-surface-bright">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Sarsawa Railway Road Offices</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Commercial offices, clinic suites &amp; repair outlets</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-label-md font-label-md font-bold text-on-surface">26 units</div>
+<span class="inline-flex items-center gap-1 text-[11px] text-tertiary font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Delivered
+              </span>
+</div>
+</div>
+<!-- Zone 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-container-high bg-surface-bright">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">local_gas_station</span>
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Highway Fuel Points &amp; Transit Hubs</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Saharanpur-Ambala highway transit fuel stops</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-label-md font-label-md font-bold text-on-surface">20 units</div>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> In Transit
+              </span>
+</div>
+</div>
+</div>
+<!-- Quick Log Actions -->
+<div class="pt-2 flex gap-2">
+<button class="flex-1 py-2 bg-primary text-on-primary rounded text-label-md font-label-md flex items-center justify-center gap-1 hover:bg-primary-container transition-colors" onclick="logCamperAction('Dispatch Recorded: +10 Units')">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+            Dispatch 20L Campers
+          </button>
+<button class="flex-1 py-2 bg-surface-container text-on-surface rounded text-label-md font-label-md flex items-center justify-center gap-1 border border-outline-variant hover:bg-surface-container-high transition-colors" onclick="logCamperAction('Return Logged: 10 Empties Collected')">
+<span class="material-symbols-outlined text-[16px]">assignment_returned</span>
+            Log Return &amp; Deposit
+          </button>
+</div>
+<div class="text-center text-label-caps font-label-caps text-tertiary hidden" id="camper-status-toast"></div>
+</div>
+</section>
+<!-- TAB 3: PACKAGED BOTTLE FILLING LINE (18 BPM) -->
+<section class="tab-pane space-y-space-md hidden" id="pane-packaging">
+<!-- 18 BPM Semi-Auto 3-in-1 Header -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">SEMI-AUTO 3-IN-1 MONOBLOC</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Bottle Packaging Line (18 BPM)</h3>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps">ONLINE: 1,080 BPH</span>
+</div>
+<!-- Metric strip -->
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 rounded bg-surface-container-low border border-surface-container-high">
+<div class="text-label-caps font-label-caps text-outline">RINSER JET</div>
+<div class="text-label-md font-label-md text-on-surface font-bold">0.8 Bar O3</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low border border-surface-container-high">
+<div class="text-label-caps font-label-caps text-outline">CAPPING TORQUE</div>
+<div class="text-label-md font-label-md text-on-surface font-bold">2.4 Nm Locked</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low border border-surface-container-high">
+<div class="text-label-caps font-label-caps text-outline">HEAT TUNNEL</div>
+<div class="text-label-md font-label-md text-primary font-bold">148°C Heat</div>
+</div>
+</div>
+</div>
+<!-- PET Formats Configurator Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<!-- 250 mL -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold">MINI SERVE</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">BATCH #2401</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-on-surface mt-2">250 mL PET</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Conferences, banquet events, and Sadpur marriage halls.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-outline">Hourly Output:</span>
+<span class="text-label-md font-label-md font-bold text-on-surface">360 units</span>
+</div>
+</div>
+<!-- 500 mL -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-bold">TRAVEL PACK</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">BATCH #2402</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-on-surface mt-2">500 mL PET</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Highway fuel points, e-rickshaw stands &amp; roadside stalls.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-outline">Hourly Output:</span>
+<span class="text-label-md font-label-md font-bold text-on-surface">420 units</span>
+</div>
+</div>
+<!-- 1000 mL (1 Liter) -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between border-l-4 border-l-primary">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-label-caps font-label-caps px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">FLAGSHIP RETAIL</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">BATCH #2403</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-on-surface mt-2">1000 mL (1L) PET</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Standard retail pack for dhabas, grocery points &amp; buses.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-outline">Hourly Output:</span>
+<span class="text-label-md font-label-md font-bold text-primary">300 units</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 4: INTERACTIVE EDITABLE EQUIPMENT COST & FINANCIAL FEASIBILITY CALCULATOR -->
+<section class="tab-pane space-y-space-md hidden" id="pane-finance">
+<!-- Live Calculated Summary Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-caps font-label-caps text-on-surface-variant">PLANT CAPEX ESTIMATE</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="text-body-lg font-body-lg font-bold text-primary">₹</span>
+<span class="text-metric-display font-metric-display text-primary" id="display-total-capex">9,03,000</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-caps font-label-caps text-tertiary">EST. DAILY NET (80 CAMPERS)</span>
+<div class="text-metric-display font-metric-display text-tertiary" id="display-daily-margin">₹1,760</div>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant border border-surface-container">
+<div class="flex justify-between items-center">
+<span>20L Camper Margin: <strong class="text-on-surface">₹22 / unit</strong></span>
+<span>PET Bottle Gross Margin: <strong class="text-on-surface">₹4.50 / unit</strong></span>
+</div>
+</div>
+</div>
+<!-- Editable Equipment Capex List -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Line-Item Equipment &amp; Civil Outlay</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Tap any figure to recalculate total capital investment.</p>
+</div>
+<button class="text-label-caps font-label-caps text-primary hover:underline" onclick="resetBudgetDefaults()">RESET</button>
+</div>
+<div class="space-y-2">
+<!-- Item 1: 1000 LPH RO Skid -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-ro-skid">1000 LPH Commercial RO Skid</label>
+<span class="text-body-sm font-body-sm text-outline">SS-304 frame, high rejection 4040 membranes</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-ro-skid" oninput="calculateTotalCapex()" type="number" value="245000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 2: 18 BPM Rinsing-Filling-Capping Machine -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-filling-machine">18 BPM Rinsing-Filling-Capping Machine</label>
+<span class="text-body-sm font-body-sm text-outline">Semi-auto 3-in-1 monobloc for 250ml - 1L</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-filling-machine" oninput="calculateTotalCapex()" type="number" value="380000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 3: Industrial UV + Corona Ozone Generator -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-uv-ozone">Industrial UV + Corona Ozone Generator</label>
+<span class="text-body-sm font-body-sm text-outline">Quartz chamber + 3-5 g/hr venturi injector</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-uv-ozone" oninput="calculateTotalCapex()" type="number" value="55000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 4: 100 Insulated 20L Campers -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-campers">100 Insulated 20L Campers (Food Grade)</label>
+<span class="text-body-sm font-body-sm text-outline">Dual layer insulated HDPE/PP @ ₹380/pc</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-campers" oninput="calculateTotalCapex()" type="number" value="38000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 5: SS304 Tanks & Sump Setup -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-tanks">SS304 Tanks &amp; Sump Setup</label>
+<span class="text-body-sm font-body-sm text-outline">Raw water 2000L + Treated pure water 3000L</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-tanks" oninput="calculateTotalCapex()" type="number" value="85000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 6: Borewell & Roadside Civil hookup (Sarsawa) -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-civil">Borewell &amp; Civil Hookup (Sarsawa/Sadpur)</label>
+<span class="text-body-sm font-body-sm text-outline">Piping, shed civil foundation, 3-phase connection</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-civil" oninput="calculateTotalCapex()" type="number" value="70000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+<!-- Item 7: Regulatory Approvals -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<label class="text-label-md font-label-md text-on-surface block" for="cost-regulatory">FSSAI &amp; UPCB Regulatory Clearances</label>
+<span class="text-body-sm font-body-sm text-outline">Food safety license, state pollution board NOC</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-caps text-body-sm font-bold text-outline">₹</span>
+<input class="w-24 text-right font-label-caps text-label-md font-bold text-on-surface bg-transparent focus:ring-0 focus:outline-none border-none p-0" id="cost-regulatory" oninput="calculateTotalCapex()" type="number" value="35000">
+<span class="material-symbols-outlined text-[14px] text-outline">edit</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GEOGRAPHIC & HYDROLOGY INTELLIGENCE (Expandable Briefing) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm space-y-2">
+<button class="w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleGeoCard()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">explore</span>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Local Ground Hydrology Intelligence</h4>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sarsawa &amp; Sadpur Basin Profile (PIN: 247232)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="geo-chevron">expand_more</span>
+</button>
+<div class="hidden pt-3 border-t border-surface-container space-y-2 text-body-sm font-body-sm text-on-surface-variant" id="geo-content">
+<p>
+          Situated in the fertile Upper Doab along the Yamuna plain, Sarsawa aquifers provide strong discharge rates but exhibit fluctuating total dissolved solids (350–650 ppm) alongside seasonal mineral hardness and agricultural runoff.
+        </p>
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-caps text-label-caps">
+<div class="bg-surface-container-low p-2 rounded">
+<span class="text-outline block">AQUIFER HARDNESS</span>
+<span class="text-on-surface font-bold">180 - 260 mg/L (Mitigated)</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded">
+<span class="text-outline block">TARGET ROUTE RADIUS</span>
+<span class="text-on-surface font-bold">5 - 8 km Battery E-Rickshaw</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BOTTOM NAVIGATION BAR (Shared Component: BottomNavBar with exact content & active state mapping) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter-mobile py-space-xs bg-surface shadow-md transition-colors duration-150">
+<!-- Tab 1: Plant Ops (Active by default) -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-space-md py-space-xs transition-transform active:scale-95 duration-100" id="nav-plant-ops" onclick="switchTab('plant-ops')">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<span class="text-label-md font-label-md">Plant Ops</span>
+</button>
+<!-- Tab 2: Campers -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-transform active:scale-95 duration-100" id="nav-campers" onclick="switchTab('campers')">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-label-md font-label-md">Campers</span>
+</button>
+<!-- Tab 3: Production -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-transform active:scale-95 duration-100" id="nav-packaging" onclick="switchTab('packaging')">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-label-md font-label-md">Production</span>
+</button>
+<!-- Tab 4: Finance -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-transform active:scale-95 duration-100" id="nav-finance" onclick="switchTab('finance')">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-label-md font-label-md">Finance</span>
+</button>
+</nav>
+<!-- SCRIPT FOR TAB SWITCHING & CAPEX CALCULATION -->
+<script>
+    function switchTab(tabId) {
+      // Hide all panes
+      document.querySelectorAll('.tab-pane').forEach(el => {
+        el.classList.add('hidden');
+        el.classList.remove('block');
+      });
+
+      // Show selected pane
+      const targetPane = document.getElementById('pane-' + tabId);
+      if (targetPane) {
+        targetPane.classList.remove('hidden');
+        targetPane.classList.add('block');
+      }
+
+      // Update Sub-nav buttons in header tab switcher
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      });
+      const activeTabBtn = document.getElementById('tab-' + tabId);
+      if (activeTabBtn) {
+        activeTabBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        activeTabBtn.classList.remove('text-on-surface-variant');
+      }
+
+      // Update Bottom Navigation Bar items according to Shared Component JSON instructions
+      const navKeys = ['plant-ops', 'campers', 'packaging', 'finance'];
+      navKeys.forEach(k => {
+        const navEl = document.getElementById('nav-' + k);
+        if (navEl) {
+          if (k === tabId) {
+            navEl.className = "flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-space-md py-space-xs transition-transform active:scale-95 duration-100";
+          } else {
+            navEl.className = "flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-transform active:scale-95 duration-100";
+          }
+        }
+      });
+      
+      // Scroll to top gently on tab transition
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Toggle Hydrology briefing card
+    function toggleGeoCard() {
+      const content = document.getElementById('geo-content');
+      const chevron = document.getElementById('geo-chevron');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Camper Dispatch logger interaction
+    function logCamperAction(msg) {
+      const toast = document.getElementById('camper-status-toast');
+      toast.innerText = msg + ' • Logged at Sarsawa Hub';
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    // Live Capex calculation
+    function calculateTotalCapex() {
+      const skid = parseFloat(document.getElementById('cost-ro-skid').value) || 0;
+      const filling = parseFloat(document.getElementById('cost-filling-machine').value) || 0;
+      const uv = parseFloat(document.getElementById('cost-uv-ozone').value) || 0;
+      const campers = parseFloat(document.getElementById('cost-campers').value) || 0;
+      const tanks = parseFloat(document.getElementById('cost-tanks').value) || 0;
+      const civil = parseFloat(document.getElementById('cost-civil').value) || 0;
+      const regulatory = parseFloat(document.getElementById('cost-regulatory').value) || 0;
+
+      const total = skid + filling + uv + campers + tanks + civil + regulatory;
+      document.getElementById('display-total-capex').innerText = total.toLocaleString('en-IN');
+    }
+
+    // Reset Capex fields
+    function resetBudgetDefaults() {
+      document.getElementById('cost-ro-skid').value = 245000;
+      document.getElementById('cost-filling-machine').value = 380000;
+      document.getElementById('cost-uv-ozone').value = 55000;
+      document.getElementById('cost-campers').value = 38000;
+      document.getElementById('cost-tanks').value = 85000;
+      document.getElementById('cost-civil').value = 70000;
+      document.getElementById('cost-regulatory').value = 35000;
+      calculateTotalCapex();
+    }
+  </script>
+</body></html>
