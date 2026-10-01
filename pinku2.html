@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijee Aqua | Owner Price Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0E4D92;
+            --accent: #00A896;
+            --dark: #1E293B;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body {
+            background-color: #E2E8F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .login-card, .admin-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 { color: var(--primary); margin-bottom: 0.5rem; }
+        p { color: #64748B; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--dark); }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn-success { background-color: var(--accent); }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .hidden { display: none; }
+        .error-msg { color: #DC2626; font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600; }
+        .success-banner {
+            background: #DCFCE7;
+            color: #166534;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. LOGIN SCREEN -->
+    <div class="login-card" id="login-section">
+        <h2>🔒 Owner Login</h2>
+        <p>Srijee Aqua Enterprises — Admin Control Panel</p>
+        
+        <div class="form-group">
+            <label>Enter Admin Secret PIN:</label>
+            <input type="password" id="admin-pin" placeholder="Enter PIN (Default: 9720)">
+        </div>
+        <button class="btn" onclick="verifyPin()">Login to Edit Prices ⚡</button>
+        <div class="error-msg" id="login-error"></div>
+    </div>
+
+    <!-- 2. PROTECTED ADMIN PRICE CONTROL PANEL -->
+    <div class="admin-card hidden" id="admin-section">
+        <h2>⚙️ Edit Product Rates Live</h2>
+        <p>Update rates below. Click "Save & Publish Prices" to instantly change prices on your main website.</p>
+
+        <div id="status-box"></div>
+
+        <div class="grid-2">
+            <div class="form-group">
+                <label>20L Camper Refill Rate:</label>
+                <input type="text" id="input-camper-refill">
+            </div>
+            <div class="form-group">
+                <label>20L Security Deposit:</label>
+                <input type="text" id="input-camper-deposit">
+            </div>
+            <div class="form-group">
+                <label>1.0L Bottle Box (12 Btls):</label>
+                <input type="text" id="input-1l-box">
+            </div>
+            <div class="form-group">
+                <label>500mL Bottle Box (24 Btls):</label>
+                <input type="text" id="input-500ml-box">
+            </div>
+            <div class="form-group">
+                <label>250mL Bottle Box (24 Btls):</label>
+                <input type="text" id="input-250ml-box">
+            </div>
+            <div class="form-group">
+                <label>Home Water Filter System:</label>
+                <input type="text" id="input-home-filter">
+            </div>
+        </div>
+
+        <button class="btn btn-success" onclick="saveNewPrices()">Save & Publish Live Prices 🚀</button>
+        <br><br>
+        <a href="index.html" style="color: #64748B; text-decoration: none; font-size: 0.9rem; display: block; text-align: center;">← Return to Customer Website</a>
+    </div>
+
+    <script>
+        const ADMIN_PIN = "9720"; // Admin PIN
+
+        const defaultPrices = {
+            camperRefill: "₹25",
+            camperDeposit: "₹200",
+            box1L: "₹120",
+            box500mL: "₹140",
+            box250mL: "₹130",
+            homeFilter: "₹4,500"
+        };
+
+        function verifyPin() {
+            const enteredPin = document.getElementById("admin-pin").value;
+            if (enteredPin === ADMIN_PIN) {
+                document.getElementById("login-section").classList.add("hidden");
+                document.getElementById("admin-section").classList.remove("hidden");
+                loadCurrentPricesIntoInputs();
+            } else {
+                document.getElementById("login-error").textContent = "❌ Incorrect Admin PIN. Try again.";
+            }
+        }
+
+        function loadCurrentPricesIntoInputs() {
+            const savedPrices = JSON.parse(localStorage.getItem("truaqua_prices")) || defaultPrices;
+            document.getElementById("input-camper-refill").value = savedPrices.camperRefill;
+            document.getElementById("input-camper-deposit").value = savedPrices.camperDeposit;
+            document.getElementById("input-1l-box").value = savedPrices.box1L;
+            document.getElementById("input-500ml-box").value = savedPrices.box500mL;
+            document.getElementById("input-250ml-box").value = savedPrices.box250mL;
+            document.getElementById("input-home-filter").value = savedPrices.homeFilter;
+        }
+
+        function saveNewPrices() {
+            const newPrices = {
+                camperRefill: document.getElementById("input-camper-refill").value,
+                camperDeposit: document.getElementById("input-camper-deposit").value,
+                box1L: document.getElementById("input-1l-box").value,
+                box500mL: document.getElementById("input-500ml-box").value,
+                box250mL: document.getElementById("input-250ml-box").value,
+                homeFilter: document.getElementById("input-home-filter").value
+            };
+
+            localStorage.setItem("truaqua_prices", JSON.stringify(newPrices));
+
+            const statusBox = document.getElementById("status-box");
+            statusBox.innerHTML = '<div class="success-banner">✓ New Prices Published Successfully! Check index.html</div>';
+            setTimeout(() => { statusBox.innerHTML = ""; }, 4000);
+        }
+    </script>
+</body>
+</html>

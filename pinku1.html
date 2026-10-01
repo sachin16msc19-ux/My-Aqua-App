@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijee Aqua Enterprises | TruAqua Premium Water & Home Filters</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0E4D92;
+            --accent: #00A896;
+            --dark: #1E293B;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .brand-tag {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-order {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(14,77,146,0.9), rgba(0,168,150,0.8)), 
+                        url('https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=1200') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .badge-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        .price-val {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .quality-list {
+            list-style: none;
+        }
+
+        .quality-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #E2E8F0;
+            display: flex;
+            align-items: center;
+        }
+
+        .quality-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+            .nav-links a { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div>
+                <div class="logo">Srijee Aqua Enterprises</div>
+                <div class="brand-tag">Brand: <span>TruAqua</span> 💧</div>
+            </div>
+            <nav class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#products">Rates</a>
+                <a href="#quality">Quality & RO Plant</a>
+                <a href="tel:9720868856" class="btn-order">📞 Call: 9720868856</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Pure & Hygienic Water Solutions in Sarsawa</h1>
+        <p>Srijee Aqua Enterprises — Sourced from pure regional groundwater and processed through 5-Stage RO + UV + Ozonation. Also offering home water filter machine sales & service.</p>
+        <div class="badge-bar">
+            <span class="badge">⚙️ 100 LPH RO Purification</span>
+            <span class="badge">🍾 18 BPM Bottling Line</span>
+            <span class="badge">🏅 IS 14543 BIS Standard</span>
+            <span class="badge">🏠 Home Water Filter Shop</span>
+        </div>
+    </section>
+
+    <!-- Core Business Streams -->
+    <section class="section" id="services">
+        <h2 class="section-title">Our 3 Core Business Streams</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>1. TruAqua Bottled Water</h3>
+                <p>Pure drinking water in eco-friendly PET bottles, rinsed, filled, and sealed on our automated 18 BPM rotary machine.</p>
+                <br>
+                <small><b>Available Sizes:</b> 250 mL, 500 mL, and 1.0 L Bottles</small>
+            </div>
+            <div class="card">
+                <h3>2. 20L Reusable Camper Service</h3>
+                <p>Daily doorstep delivery of 20L sanitized water campers across local shops, offices, restaurants, and homes in Sarsawa.</p>
+                <br>
+                <small><b>Fleet Capacity:</b> 50 - 100 Active Jars</small>
+            </div>
+            <div class="card">
+                <h3>3. Home Water Filter Shop</h3>
+                <p>Our dedicated shop for sales, installation, and maintenance of small eco-guard type water filter machines for home use.</p>
+                <br>
+                <small><b>Service:</b> Domestic RO, UV & Carbon Filters</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Rates & Pricing Table -->
+    <section class="section" id="products">
+        <h2 class="section-title">Product Catalog & Rates</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product / Service</th>
+                        <th>Pack Size / Type</th>
+                        <th>Price / Rate (₹)</th>
+                        <th>Security Deposit (₹)</th>
+                        <th>Target Area / Customers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>20L Reusable Camper</b></td>
+                        <td>20 Litres Jar</td>
+                        <td><span class="price-val" id="price-camper-refill">₹25</span> / Refill</td>
+                        <td><span id="price-camper-deposit">₹200</span> (Refundable)</td>
+                        <td>Homes, Shops, Offices, Caterers</td>
+                    </tr>
+                    <tr>
+                        <td><b>TruAqua 1.0L Bottle</b></td>
+                        <td>Box of 12 Bottles</td>
+                        <td><span class="price-val" id="price-1l-box">₹120</span> / Box (₹10/btl)</td>
+                        <td>N/A</td>
+                        <td>Retail Stores, Bus Stand, Travellers</td>
+                    </tr>
+                    <tr>
+                        <td><b>TruAqua 500mL Bottle</b></td>
+                        <td>Box of 24 Bottles</td>
+                        <td><span class="price-val" id="price-500ml-box">₹140</span> / Box (₹5.8/btl)</td>
+                        <td>N/A</td>
+                        <td>Meetings, Clinics, Functions</td>
+                    </tr>
+                    <tr>
+                        <td><b>TruAqua 250mL Bottle</b></td>
+                        <td>Box of 24 Bottles</td>
+                        <td><span class="price-val" id="price-250ml-box">₹130</span> / Box (₹5.4/btl)</td>
+                        <td>N/A</td>
+                        <td>Weddings, Events, Parties</td>
+                    </tr>
+                    <tr>
+                        <td><b>Home Water Filter Machine</b></td>
+                        <td>Domestic RO/UV System</td>
+                        <td><span class="price-val" id="price-home-filter">₹4,500</span> onwards</td>
+                        <td>Installation Extra</td>
+                        <td>Households & Small Offices in Sarsawa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Purification & Quality Standards -->
+    <section class="section" id="quality">
+        <h2 class="section-title">5-Stage Purification & Quality Compliance</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Multi-Stage Filtration Pipeline</h3>
+                <ul class="quality-list">
+                    <li>Dual Media & Activated Carbon Pre-Filter</li>
+                    <li>100 LPH High-Pressure Reverse Osmosis (RO)</li>
+                    <li>Ultraviolet (UV) Pathogen Sterilization</li>
+                    <li>Ozonation System for Long Bottle Shelf-Life</li>
+                    <li>0.2 Micron Final Polishing Filter</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Certified Water Parameters</h3>
+                <ul class="quality-list">
+                    <li><b>TDS Range:</b> Optimal 120 - 140 mg/L</li>
+                    <li><b>pH Balance:</b> 6.9 - 7.1</li>
+                    <li><b>Microbial Quality:</b> 0 CFU (100% Sterile)</li>
+                    <li><b>Standard Compliance:</b> IS 14543 (BIS)</li>
+                    <li><b>FSSAI License:</b> High-Risk Category Compliant</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <h2>Contact Srijee Aqua Enterprises</h2>
+        <p style="margin-top: 10px;">Brand Name: <b>TruAqua 💧</b></p>
+        <p>📍 Location: Main Road, Sarsawa, District Saharanpur, Uttar Pradesh - 247232</p>
+        <p>📞 Phone / WhatsApp Orders: <a href="tel:9720868856">9720868856</a></p>
+        <p>⏰ Hours: Monday - Saturday (7:00 AM - 8:00 PM) | Sunday (8:00 AM - 2:00 PM)</p>
+        <br>
+        <p><small>© 2026 Srijee Aqua Enterprises | <a href="admin.html" style="color: #94A3B8;">🔒 Owner Admin Login</a></small></p>
+    </footer>
+
+    <!-- JS: READS LIVE PRICES FROM STORAGE -->
+    <script>
+        const defaultPrices = {
+            camperRefill: "₹25",
+            camperDeposit: "₹200",
+            box1L: "₹120",
+            box500mL: "₹140",
+            box250mL: "₹130",
+            homeFilter: "₹4,500"
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedPrices = JSON.parse(localStorage.getItem("truaqua_prices")) || defaultPrices;
+            document.getElementById("price-camper-refill").textContent = savedPrices.camperRefill;
+            document.getElementById("price-camper-deposit").textContent = savedPrices.camperDeposit;
+            document.getElementById("price-1l-box").textContent = savedPrices.box1L;
+            document.getElementById("price-500ml-box").textContent = savedPrices.box500mL;
+            document.getElementById("price-250ml-box").textContent = savedPrices.box250mL;
+            document.getElementById("price-home-filter").textContent = savedPrices.homeFilter;
+        });
+    </script>
+</body>
+</html>
