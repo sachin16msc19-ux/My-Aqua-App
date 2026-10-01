@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camper Deposit &amp; Empty Exchange Ledger - Shreeji Aqua Delivery</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#d2e4ff",
+            "primary-fixed-dim": "#b0c8eb",
+            "secondary": "#00677d",
+            "on-secondary-container": "#005c70",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-tint": "#49607e",
+            "surface-dim": "#d6dbde",
+            "primary": "#000f22",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#005048",
+            "secondary-container": "#50d9fe",
+            "on-primary-fixed-variant": "#314865",
+            "surface": "#f5fafd",
+            "primary-container": "#0a2540",
+            "surface-container": "#eaeff2",
+            "surface-container-high": "#e4e9ec",
+            "inverse-surface": "#2c3134",
+            "tertiary": "#001210",
+            "on-surface-variant": "#43474d",
+            "outline": "#74777e",
+            "on-primary-fixed": "#001c37",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f5fafd",
+            "error": "#ba1a1a",
+            "on-secondary-fixed": "#001f27",
+            "surface-variant": "#dee3e6",
+            "on-primary-container": "#768dad",
+            "inverse-primary": "#b0c8eb",
+            "inverse-on-surface": "#ecf1f4",
+            "background": "#f5fafd",
+            "tertiary-fixed-dim": "#5bdac9",
+            "surface-container-highest": "#dee3e6",
+            "on-surface": "#171c1f",
+            "on-tertiary-fixed": "#00201c",
+            "on-background": "#171c1f",
+            "on-tertiary-container": "#009d8e",
+            "secondary-fixed": "#b3ebff",
+            "tertiary-fixed": "#7af7e5",
+            "secondary-fixed-dim": "#4cd6fb",
+            "on-secondary-fixed-variant": "#004e5f",
+            "tertiary-container": "#002a25",
+            "surface-container-low": "#eff4f7",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c4c6ce"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display": ["Space Grotesk"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-mobile": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "title-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "display-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md min-h-screen pb-24">
+<!-- Fixed Mobile Canvas Wrapper (Max width ~390px - 430px for authentic mobile experience) -->
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-background relative shadow-sm border-x border-surface-variant/40">
+<!-- Top App Bar (Shared Anchor Blueprint adapted for ledger sub-page context) -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-4 py-3">
+<div class="flex items-center gap-2.5">
+<button aria-label="Go Back" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container-high text-primary active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">Camper &amp; Deposit</h1>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Physical Asset &amp; Refund Ledger</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container-high text-primary active:scale-95 transition-transform duration-150" title="Download Statement" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">download</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container-high text-primary active:scale-95 transition-transform duration-150" title="Audit Policy Info" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+</button>
+</div>
+</div>
+<!-- Sarsawa Plant Connection Meta Strip -->
+<div class="bg-surface-container-low px-4 py-1.5 flex items-center justify-between text-on-surface-variant text-[11px] font-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-semibold text-primary">Sarsawa Central Plant (247232)</span>
+</div>
+<div class="font-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 rounded border border-surface-variant/60 font-semibold">
+          #SA-DH-142 • Bypass Dhaba
+        </div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 py-4 space-y-4">
+<!-- Real-time Container & Deposit Summary Card (Hero Widget) -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container via-[#0e3256] to-primary text-on-primary p-4 shadow-md border border-primary-container/40">
+<!-- Background Fluid Water Wave Glow Elements -->
+<div class="absolute -top-12 -right-12 w-44 h-44 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 bg-tertiary-fixed/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 space-y-3.5">
+<!-- Top Row: Trust Guarantee Pill -->
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 bg-surface-container-lowest/15 backdrop-blur-md px-2.5 py-1 rounded-full border border-surface-container-lowest/20">
+<span class="material-symbols-outlined text-tertiary-fixed text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-surface tracking-wider font-semibold">100% REFUNDABLE DEPOSIT</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Daily Purity Audit</span>
+</div>
+<!-- Central Holding & Deposit Metric Grid -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<!-- Metric 1: Physical Campers Held -->
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm rounded-lg p-3 border border-surface-container-lowest/15 flex flex-col justify-between">
+<div class="flex items-center gap-1.5 text-primary-fixed mb-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">local_shipping</span>
+<span class="font-label-md text-label-md text-primary-fixed-dim">In Possession</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-primary font-label-lg">4</span>
+<span class="font-body-sm text-body-sm text-secondary-fixed font-medium">Campers</span>
+</div>
+<p class="font-label-sm text-[10px] text-primary-fixed-dim mt-1">20L PUF Chill Insulated</p>
+</div>
+<!-- Metric 2: Deposit Amount -->
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm rounded-lg p-3 border border-surface-container-lowest/15 flex flex-col justify-between">
+<div class="flex items-center gap-1.5 text-primary-fixed mb-1">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">currency_rupee</span>
+<span class="font-label-md text-label-md text-primary-fixed-dim">Deposit Held</span>
+</div>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-tertiary-fixed font-label-lg">₹600</span>
+</div>
+<p class="font-label-sm text-[10px] text-primary-fixed-dim mt-1">4 units × ₹150 security</p>
+</div>
+</div>
+<!-- Bottom Action Row inside Hero Card -->
+<div class="pt-1 flex items-center gap-2">
+<button class="flex-1 bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary py-2.5 px-3 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors duration-150 shadow-sm font-semibold active:scale-95" type="button">
+<span class="material-symbols-outlined text-[17px]">sync</span>
+              Request Empty Pickup
+            </button>
+<button class="bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 text-on-primary py-2.5 px-3 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors duration-150 border border-surface-container-lowest/20 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[17px]">receipt_long</span>
+              PDF
+            </button>
+</div>
+</div>
+</section>
+<!-- Quick Metrics Ribbon (All-Time High Trust Performance) -->
+<section class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-surface-variant text-center shadow-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Delivered</p>
+<p class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">142</p>
+<span class="text-[10px] text-secondary font-label-sm">All-time cans</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-surface-variant text-center shadow-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Returned</p>
+<p class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">138</p>
+<span class="text-[10px] text-tertiary-container font-label-sm">Sanitized &amp; Logged</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-surface-variant text-center shadow-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Compliance</p>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold mt-0.5">97.2%</p>
+<span class="text-[10px] text-secondary font-semibold font-label-sm">★ Tier 1 Priority</span>
+</div>
+</section>
+<!-- Purity Inspection & Empty Return Rules Disclosure Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-secondary-fixed p-3.5 space-y-2.5 shadow-sm">
+<div class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</span>
+<div>
+<h2 class="font-label-lg text-label-lg font-bold text-primary">Sarsawa Empty Exchange Policy</h2>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Simple 1-for-1 refills • Zero extra charge</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</div>
+<div class="grid grid-cols-1 divide-y divide-surface-variant text-[12px] pt-1">
+<div class="py-1.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-primary">1-for-1 Refill Exchange:</span>
+<span class="text-on-surface-variant"> Hand over 1 empty camper for each filled camper received. Exactly ₹0 deposit charged.</span>
+</div>
+</div>
+<div class="py-1.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">add_circle</span>
+<div>
+<span class="font-semibold text-primary">Taking Extra Campers:</span>
+<span class="text-on-surface-variant"> ₹150 refundable container deposit automatically added per extra camper taken without empty.</span>
+</div>
+</div>
+<div class="py-1.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">sanitizer</span>
+<div>
+<span class="font-semibold text-primary">Return Inspection:</span>
+<span class="text-on-surface-variant"> Campers must have uncracked food-grade shell, intact neck ring, and sealable valve.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Ledger Section Header & Interactive Filter Bar -->
+<section class="space-y-2.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-lg text-title-lg font-bold text-primary tracking-tight">Audit History</h2>
+<span class="bg-surface-variant text-on-surface-variant text-[11px] font-label-md px-1.5 py-0.5 rounded-full">4 Records</span>
+</div>
+<button class="text-secondary font-label-md text-label-md flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
+          </button>
+</div>
+<!-- Filter Chips (Horizontal Scrollable) -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-xs font-semibold" type="button">
+            All Transactions
+          </button>
+<button class="bg-surface-container-lowest text-on-surface-variant hover:text-primary border border-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap" type="button">
+            Deliveries (+)
+          </button>
+<button class="bg-surface-container-lowest text-on-surface-variant hover:text-primary border border-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap" type="button">
+            Returns (-)
+          </button>
+<button class="bg-surface-container-lowest text-on-surface-variant hover:text-primary border border-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap" type="button">
+            Deposits &amp; UPI Refunds
+          </button>
+</div>
+</section>
+<!-- Itemized Ledger Cards -->
+<section class="space-y-3">
+<!-- LEDGER ITEM 1: Today Balanced Refill -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-surface-variant shadow-xs space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary">Balanced 1:1 Exchange</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Today, 08:41 AM • Order #SA-8492</p>
+</div>
+</div>
+<span class="bg-secondary-fixed/50 text-on-secondary-fixed-variant px-2 py-0.5 rounded font-label-sm text-[10px] font-bold">
+              Balanced Refill
+            </span>
+</div>
+<!-- Transaction Data Matrix -->
+<div class="bg-surface-container-low rounded-lg p-2.5 text-[12px] space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">water_drop</span>
+                Full Campers Received:
+              </span>
+<span class="font-bold text-primary font-label-md">+4 (20L Mineral)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-[14px]">arrow_circle_left</span>
+                Empty Campers Handed Over:
+              </span>
+<span class="font-bold text-on-tertiary-container font-label-md">-4 Empties</span>
+</div>
+<div class="pt-1.5 border-t border-surface-variant/80 flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Net Holding Impact:</span>
+<span class="font-bold text-primary">±0 (Balance remains 4 units)</span>
+</div>
+<div class="flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Deposit Adjustment:</span>
+<span class="font-bold text-secondary">₹0 (Zero Charge)</span>
+</div>
+</div>
+<!-- Driver Verification Footer -->
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">badge</span>
+              Verified by Sonu Singh (Bolero Cargo UP-11-BT-4902)
+            </span>
+<span class="material-symbols-outlined text-outline text-[16px]">check_circle</span>
+</div>
+</div>
+<!-- LEDGER ITEM 2: Extra Camper Borrowed (Deposit Added) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-surface-variant shadow-xs space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary">Festive Extra Units</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant">18 Oct, 07:30 AM • Order #SA-8210</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded font-label-sm text-[10px] font-bold">
+              +₹300 Deposit Paid
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 text-[12px] space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">water_drop</span>
+                Full Campers Received:
+              </span>
+<span class="font-bold text-primary font-label-md">+6 (20L Mineral)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[14px]">arrow_circle_left</span>
+                Empty Campers Handed Over:
+              </span>
+<span class="font-bold text-outline font-label-md">-4 Empties</span>
+</div>
+<div class="pt-1.5 border-t border-surface-variant/80 flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Net Holding Impact:</span>
+<span class="font-bold text-primary">+2 Campers (Held: 4 → 6)</span>
+</div>
+<div class="flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Deposit Adjustment:</span>
+<span class="font-bold text-primary">+₹300 (Paid via UPI)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">badge</span>
+              Verified by Amit Saini (Tata Ace UP-11-AT-3112)
+            </span>
+<span class="font-label-sm text-secondary font-semibold">Ref: UPI-749219</span>
+</div>
+</div>
+<!-- LEDGER ITEM 3: Empty Pickup & Security Deposit Refund Credited -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-surface-variant shadow-xs space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary">Empty Collection &amp; Refund</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant">12 Oct, 04:15 PM • Return Slip #RT-109</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded font-label-sm text-[10px] font-bold">
+              ₹300 Refunded
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 text-[12px] space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[14px]">water_drop</span>
+                Full Campers Received:
+              </span>
+<span class="font-bold text-outline font-label-md">0 (Empty Pickup Only)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-[14px]">keyboard_return</span>
+                Empty Campers Picked Up:
+              </span>
+<span class="font-bold text-on-tertiary-container font-label-md">2 Units Picked Up</span>
+</div>
+<div class="pt-1.5 border-t border-surface-variant/80 flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Net Holding Impact:</span>
+<span class="font-bold text-primary">-2 Campers (Held: 6 → 4)</span>
+</div>
+<div class="flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Deposit Refund Method:</span>
+<span class="font-bold text-on-tertiary-container">₹300 Credited to UPI</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+              UTR: 948102391024 • Instant Bank Credit
+            </span>
+<button class="text-secondary font-semibold font-label-sm hover:underline" type="button">View Receipt</button>
+</div>
+</div>
+<!-- LEDGER ITEM 4: Regular Morning Refill -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-surface-variant shadow-xs space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary">Regular Refill Handover</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant">05 Oct, 08:15 AM • Order #SA-7901</p>
+</div>
+</div>
+<span class="bg-secondary-fixed/50 text-on-secondary-fixed-variant px-2 py-0.5 rounded font-label-sm text-[10px] font-bold">
+              Balanced Refill
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 text-[12px] space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Exchange Count:</span>
+<span class="font-bold text-primary font-label-md">4 Delivered ⇄ 4 Empties Exchanged</span>
+</div>
+<div class="flex justify-between items-center text-[11px]">
+<span class="text-on-surface-variant">Security Deposit Adjustment:</span>
+<span class="font-bold text-secondary">₹0 (Zero Charge)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">badge</span>
+              Verified by Sonu Singh (Bolero Cargo)
+            </span>
+<span class="material-symbols-outlined text-outline text-[16px]">check_circle</span>
+</div>
+</div>
+</section>
+<!-- Sarsawa Plant Dispatch Desk Help Footer Banner -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-surface-variant space-y-2 text-center">
+<div class="w-10 h-10 mx-auto rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-primary">Need Physical Camper Audit or Return?</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+            Have damaged cans or closing seasonal commercial operations? Contact Sarsawa Plant Dispatch desk for instant doorstep settlement.
+          </p>
+</div>
+<div class="pt-1">
+<a class="inline-flex items-center justify-center gap-2 bg-surface-container-high hover:bg-surface-container-highest text-primary px-4 py-2 rounded-lg font-label-md text-label-md font-semibold transition-colors duration-150 active:scale-95" href="tel:+919897100000">
+<span class="material-symbols-outlined text-[16px] text-secondary">call</span>
+            Call Dispatch: +91 98971-XXXXX
+          </a>
+</div>
+</section>
+</main>
+<!-- Docked Bottom Navigation Bar (Executed verbatim from Shared Components JSON blueprint) -->
+<!-- Destination count: 4, labels: ["Book Camperp", "Subscriptions", "My Orders", "Profile"] -->
+<!-- Active selection mapped to "My Orders" ledger audit domain -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 border-t border-surface-variant dark:border-outline-variant/20 bg-surface-container-lowest/95 dark:bg-surface-container/95 backdrop-blur-lg shadow-lg">
+<div class="max-w-md mx-auto w-full flex justify-around items-center">
+<!-- Tab 1: Book Camperp -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed active:scale-90 transition-transform duration-150" href="#book">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+<span class="text-label-sm font-label-sm mt-0.5">Book Camperp</span>
+</a>
+<!-- Tab 2: Subscriptions -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed active:scale-90 transition-transform duration-150" href="#subscriptions">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+<span class="text-label-sm font-label-sm mt-0.5">Subscriptions</span>
+</a>
+<!-- Tab 3: My Orders (ACTIVE state as specified by style_active_navigation) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-3 py-1.5 active:scale-90 transition-transform duration-150 shadow-xs" href="#orders">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">My Orders</span>
+</a>
+<!-- Tab 4: Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed active:scale-90 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shreeji Aqua Live Delivery Tracking</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#0a2540",
+            "secondary-fixed-dim": "#4cd6fb",
+            "surface-container-low": "#eff4f7",
+            "primary-fixed-dim": "#b0c8eb",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#ecf1f4",
+            "on-secondary-fixed": "#001f27",
+            "surface-container-high": "#e4e9ec",
+            "on-tertiary-fixed-variant": "#005048",
+            "on-tertiary-fixed": "#00201c",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#49607e",
+            "tertiary-fixed-dim": "#5bdac9",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#001c37",
+            "outline-variant": "#c4c6ce",
+            "inverse-surface": "#2c3134",
+            "primary": "#000f22",
+            "on-secondary-fixed-variant": "#004e5f",
+            "primary-fixed": "#d2e4ff",
+            "on-surface-variant": "#43474d",
+            "secondary-container": "#50d9fe",
+            "on-primary-fixed-variant": "#314865",
+            "surface-container": "#eaeff2",
+            "surface-variant": "#dee3e6",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#b3ebff",
+            "surface-bright": "#f5fafd",
+            "surface-dim": "#d6dbde",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#009d8e",
+            "surface-container-highest": "#dee3e6",
+            "tertiary-container": "#002a25",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#001210",
+            "on-background": "#171c1f",
+            "on-surface": "#171c1f",
+            "secondary": "#00677d",
+            "tertiary-fixed": "#7af7e5",
+            "on-primary-container": "#768dad",
+            "surface": "#f5fafd",
+            "on-secondary-container": "#005c70",
+            "outline": "#74777e",
+            "background": "#f5fafd",
+            "inverse-primary": "#b0c8eb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin-sm": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Space Grotesk"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "display-mobile": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+            "display-mobile": ["38px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-md": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "headline-lg-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.08); }
+    }
+    @keyframes radar-ripple {
+      0% { transform: scale(0.8); opacity: 0.9; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+    .animate-radar {
+      animation: radar-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+    .pulse-dot {
+      animation: pulse-subtle 1.8s infinite ease-in-out;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container min-h-screen pb-24">
+<!-- Mobile Container Shell -->
+<main class="max-w-md mx-auto bg-surface relative min-h-screen flex flex-col shadow-2xl">
+<!-- TopAppBar Sticky Docked Shell -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-4 py-3 max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<button aria-label="Go Back" class="w-9 h-9 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-transform duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="text-label-lg font-label-lg text-primary tracking-tight">Live Camper Tracking</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container pulse-dot"></span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Order #SA-8492 • 4x 20L Campers</span>
+</div>
+</div>
+<button aria-label="Notifications" class="w-9 h-9 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-transform duration-150 active:scale-95 relative" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Live Corridor Status Banner Strip -->
+<div class="bg-surface-container-low px-4 py-2 flex items-center justify-between border-t border-surface-variant/40">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-xs border border-secondary-container/40">
+<span class="w-2 h-2 rounded-full bg-secondary pulse-dot"></span>
+<span class="text-label-sm font-label-sm text-primary tracking-wide">Out for Delivery • On Route</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">pin_drop</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Sarsawa NH-344</span>
+</div>
+</div>
+</header>
+<!-- CONTENT CANVAS -->
+<div class="px-4 py-4 space-y-4 flex-1">
+<!-- Map & Real-Time Driver Route Viewport Section -->
+<section class="relative rounded-xl overflow-hidden border border-[#E1EDF5] bg-surface-container-lowest shadow-sm">
+<!-- Stylized Map Graphic Canvas with Sadpur -> Sarsawa Highway Route -->
+<div class="relative w-full h-72 bg-[#E9F3F8] overflow-hidden" data-location="Sarsawa" style="">
+<!-- Stylized road grid lines representing Western UP / Saharanpur outskirts -->
+<svg class="absolute inset-0 w-full h-full opacity-60" fill="none" preserveaspectratio="xMidYMid slice" viewbox="0 0 400 300">
+<!-- Secondary streets & rural road network -->
+<path d="M-20 60 C80 50, 160 120, 240 100 S360 40, 440 60" fill="none" stroke="#CBDDE9" stroke-linecap="round" stroke-width="3"></path>
+<path d="M40 290 C90 220, 140 210, 220 180 S340 220, 420 190" fill="none" stroke="#CBDDE9" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M120 -20 L150 320" stroke="#DFEAF0" stroke-dasharray="4 4" stroke-width="2"></path>
+<path d="M290 -10 L270 310" stroke="#DFEAF0" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Highway 344 Corridor Arterial Path -->
+<path d="M40 50 C 90 90, 120 150, 175 160 S 260 140, 340 240" stroke="#CBDDE9" stroke-linecap="round" stroke-width="10"></path>
+<path d="M40 50 C 90 90, 120 150, 175 160 S 260 140, 340 240" stroke="#FFFFFF" stroke-linecap="round" stroke-width="6"></path>
+<!-- Active Driven Route Path (Glow + Solid Ocean Cyan) -->
+<path d="M40 50 C 90 90, 120 150, 175 160 S 210 148, 235 168" stroke="#50d9fe" stroke-dasharray="2 0" stroke-linecap="round" stroke-width="5"></path>
+<path d="M235 168 C 260 188, 300 215, 340 240" opacity="0.6" stroke="#00677d" stroke-dasharray="5 5" stroke-linecap="round" stroke-width="4"></path>
+<!-- Sadpur RO Plant Marker (Origin) -->
+<circle cx="40" cy="50" fill="#0a2540" fill-opacity="0.12" r="14"></circle>
+<circle cx="40" cy="50" fill="#0a2540" r="8"></circle>
+<circle cx="40" cy="50" fill="#ffffff" r="3"></circle>
+<!-- Customer Location Marker: Shop #14 Sarsawa Bypass (Destination) -->
+<circle cx="340" cy="240" fill="#00677d" fill-opacity="0.15" r="16"></circle>
+<circle cx="340" cy="240" fill="#00677d" r="9"></circle>
+<circle cx="340" cy="240" fill="#ffffff" r="3.5"></circle>
+<!-- Live Vehicle Position (Bolero Cargo UP-11-T-8412) with GPS Pulse -->
+<g transform="translate(235, 168)">
+<!-- Radar ripple rings -->
+<circle class="animate-radar" cx="0" cy="0" fill="#50d9fe" opacity="0.4" r="16"></circle>
+<circle cx="0" cy="0" fill="#50d9fe" opacity="0.7" r="12"></circle>
+<circle cx="0" cy="0" fill="#0a2540" r="8"></circle>
+<circle cx="0" cy="0" fill="#ffffff" r="3"></circle>
+</g>
+</svg>
+<!-- Origin Pin Tooltip Overlay -->
+<div class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-xs border border-surface-variant flex items-center gap-1.5 pointer-events-none">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="water_drop">water_drop</span>
+<div class="text-[11px] leading-tight font-headline-sm font-semibold text-primary">Plant: Sadpur Road</div>
+</div>
+<!-- Live Transit Vehicle Badge Overlay -->
+<div class="absolute top-28 left-40 transform -translate-x-1/2 bg-primary text-on-primary text-[10px] font-label-md px-2 py-0.5 rounded-full shadow-md flex items-center gap-1 pointer-events-none border border-secondary-container/40">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" data-icon="local_shipping">local_shipping</span>
+<span>UP-11 Bolero Cargo</span>
+</div>
+<!-- Destination Pin Tooltip Overlay -->
+<div class="absolute bottom-16 right-3 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-xs border border-secondary/20 flex items-center gap-1.5 pointer-events-none">
+<span class="material-symbols-outlined text-[15px] text-secondary" data-icon="storefront">storefront</span>
+<div class="text-[11px] leading-tight font-headline-sm font-semibold text-on-surface">Shop #14, Bypass</div>
+</div>
+<!-- Recenter Map Floating Action -->
+<button aria-label="Recenter map on driver" class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md p-2 rounded-lg text-primary shadow-sm hover:bg-surface-container-high transition-transform duration-150 active:scale-95 border border-surface-variant/50 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+</button>
+</div>
+<!-- Floating ETA & Live Distance Bar (Level 2 Elevation) -->
+<div class="p-3.5 bg-surface-container-lowest flex items-center justify-between border-t border-[#E1EDF5]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary border border-secondary-container/50">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">18 Mins</span>
+<span class="text-body-sm font-body-sm text-secondary font-medium">ETA 8:42 AM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                1.8 km away • Approaching Sarsawa Toll Chowk
+              </p>
+</div>
+</div>
+<button class="px-2.5 py-1.5 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg text-label-sm font-label-sm flex items-center gap-1 transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Live</span>
+</button>
+</div>
+</section>
+<!-- Live Delivery Driver Card -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-[#E1EDF5] shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Driver Avatar with Verified Seal -->
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-secondary-container" data-alt="Close up professional portrait of Sonu Singh, a courteous Indian water delivery executive wearing a clean navy blue uniform with pure water drops emblem, warm natural morning daylight, sharp clean focus, modern commercial realism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4HAdKDtizL2s51PfpjLec96gpVUi2EXzSmdRFJd2Ag5RuTUATQEgR0KPR9A3TjCBQ3iuIjTlD--fHUONsVYRX1Hs2HZn5raSStewkeUSdTv4jADhVTupQGmrKOqzdQM7UwKFCqPxCZ7jf6OsxWC29KSNGZhzQA4AUsZZBBZkl8fAnycrEdG_nmoEhQ9BPUtK-UwnDprUGe7MMWM0ipXCOdHPeB-Qjwzb5H0bHtsO64m8sCwyUiwck"/>
+<div class="absolute -bottom-1 -right-1 bg-surface-container-lowest p-0.5 rounded-full shadow-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary font-bold" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="text-title-md font-title-md font-semibold text-primary">Sonu Singh</h2>
+<div class="flex items-center gap-0.5 bg-secondary-fixed/50 px-1.5 py-0.5 rounded text-[11px] font-label-md text-on-secondary-fixed font-bold">
+<span class="material-symbols-outlined text-[12px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.9
+                </div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Mahindra Bolero Cargo • UP-11-T-8412</p>
+<p class="text-[11px] font-body-sm text-on-surface-variant/80">340+ Sarsawa &amp; Sadpur Deliveries</p>
+</div>
+</div>
+<!-- Direct Driver CTAs -->
+<div class="flex items-center gap-2">
+<!-- WhatsApp Chat Button -->
+<a aria-label="Chat with Sonu on WhatsApp" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary transition-transform active:scale-95" href="tel:+919876543210">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<!-- Call Driver CTA (Primary Design Accent) -->
+<a class="px-3.5 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg text-label-md font-label-md flex items-center gap-1.5 shadow-sm transition-all duration-200 active:scale-95" href="tel:+919876543210">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>Call Sonu</span>
+</a>
+</div>
+</div>
+<!-- Quick Emergency Hotline -->
+<div class="mt-3 pt-2.5 border-t border-surface-variant/50 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">support_agent</span>
+            Need plant dispatch support?
+          </span>
+<a class="text-secondary font-label-md hover:underline" href="#">Sarsawa Plant Helpline</a>
+</div>
+</section>
+<!-- Multi-Stage Purity & Delivery Stepper -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-[#E1EDF5] shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
+<h3 class="text-title-md font-title-md text-primary font-bold">Camper Journey &amp; Safety</h3>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-low px-2 py-0.5 rounded-full border border-secondary-container/30">
+            Batch #SA-402
+          </span>
+</div>
+<div class="space-y-4 relative pl-2">
+<!-- Continuous Stepper Guide Line -->
+<div class="absolute left-[19px] top-3 bottom-5 w-0.5 bg-surface-container-high"></div>
+<!-- Step 1: Confirmed & Sanitized (Completed) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center z-10 shadow-xs ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex-1 -mt-0.5">
+<div class="flex items-center justify-between">
+<p class="text-label-md font-label-md font-semibold text-primary">Order Confirmed &amp; Sanitized</p>
+<span class="text-[11px] font-label-sm text-on-surface-variant">7:45 AM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">4x commercial containers hot-rinse sanitized</p>
+</div>
+</div>
+<!-- Step 2: Loaded & 90 PPM Tested (Completed) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center z-10 shadow-xs ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex-1 -mt-0.5">
+<div class="flex items-center justify-between">
+<p class="text-label-md font-label-md font-semibold text-primary">Loaded &amp; 90 PPM Tested</p>
+<span class="text-[11px] font-label-sm text-on-surface-variant">8:10 AM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Double Ozone induction seal intact &amp; mineral verified</p>
+</div>
+</div>
+<!-- Step 3: Out for Delivery (Active) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center z-10 shadow-sm ring-4 ring-surface-container-lowest pulse-dot">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+</div>
+<div class="flex-1 -mt-0.5 bg-surface-container-low/70 p-2.5 rounded-lg border border-secondary-container/40">
+<div class="flex items-center justify-between">
+<p class="text-label-md font-label-md font-bold text-primary">Out for Delivery</p>
+<span class="text-label-sm font-label-sm text-secondary font-bold">8:25 AM (En Route)</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Departed Sadpur facility via NH-344 expressway</p>
+</div>
+</div>
+<!-- Step 4: Camper Handover & Empty Return (Upcoming) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center z-10 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span>
+</div>
+<div class="flex-1 -mt-0.5">
+<div class="flex items-center justify-between">
+<p class="text-label-md font-label-md text-on-surface-variant">Camper Handover &amp; Empty Return</p>
+<span class="text-[11px] font-label-sm text-outline">Est 8:42 AM</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline">Doorstep seal verification &amp; 4 empty exchange collection</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialized Water Quality Meter & Batch Purity Card -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-[#E1EDF5] shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="verified_user">verified_user</span>
+<h3 class="text-title-md font-title-md font-semibold text-primary">Batch Purity Parameters</h3>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed/30 text-primary font-semibold">
+            Certified Pure
+          </span>
+</div>
+<!-- Dynamic Visual Gauge -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-medium">TDS Hardness Reading</span>
+<span class="font-headline-sm font-bold text-primary">90 PPM (Optimal 70-120)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary-fixed to-secondary-container w-[45%] rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-surface-variant/40 text-center">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">pH Level</span>
+<span class="font-headline-sm font-bold text-primary text-[14px]">7.4 Pure</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Seal Safety</span>
+<span class="font-headline-sm font-bold text-secondary text-[14px]">Ozone 100%</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Filtration</span>
+<span class="font-headline-sm font-bold text-primary text-[14px]">7-Stage RO</span>
+</div>
+</div>
+</section>
+<!-- Order & Camper Summary Card -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-[#E1EDF5] shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="receipt_long">receipt_long</span>
+<h3 class="text-title-md font-title-md font-semibold text-primary">Order Manifest</h3>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cash / UPI on Handover</span>
+</div>
+<!-- Camper Item -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="water_full">water_full</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-primary">4x 20L PUF Insulated Commercial Campers</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Chilled Refill • Sarsawa Express Delivery</p>
+</div>
+</div>
+<span class="text-label-lg font-label-lg font-bold text-primary">₹120.00</span>
+</div>
+<!-- Camper Exchange Assurance Box -->
+<div class="p-2.5 rounded-lg bg-surface-container-low/60 border border-[#CBDDE9] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="sync">sync</span>
+<div>
+<p class="text-label-sm font-label-sm text-primary font-bold">4 Empty Campers Ready for Return</p>
+<p class="text-[11px] font-body-sm text-on-surface-variant">Zero security deposit deducted</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm font-semibold text-secondary">₹0 Deposit</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-title-md font-title-md font-bold text-primary">Total Payable</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">₹120.00</span>
+</div>
+</section>
+<!-- Delivery Instructions & Drop-off Notes -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-[#E1EDF5] shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[17px]">notes</span>
+<span class="text-label-md font-label-md font-semibold text-primary">Delivery Instructions</span>
+</div>
+<button class="text-secondary font-label-sm hover:underline" type="button">Change</button>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant bg-surface-container-low p-2.5 rounded-lg border border-surface-variant/30 leading-relaxed">
+          "Leave at front counter next to water dispenser at Shop #14 Sarsawa Bypass. Please check tamper-proof seal before handover."
+        </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg border border-[#CBDDE9] hover:bg-surface-container-low text-primary text-label-sm font-label-sm transition-all active:scale-95 text-center" type="button">
+            Report Delay
+          </button>
+<button class="flex-1 py-2 px-3 rounded-lg border border-[#CBDDE9] hover:bg-surface-container-low text-primary text-label-sm font-label-sm transition-all active:scale-95 text-center" type="button">
+            Share Live Trip
+          </button>
+</div>
+</section>
+</div>
+<!-- BottomNavBar Anchored Shell (Mandatory JSON Shared Component Integration) -->
+<!-- Screen intent is Live Order Tracking: maps to active destination "My Orders" -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 border-t border-surface-variant dark:border-outline-variant/20 bg-surface-container-lowest/95 dark:bg-surface-container/95 backdrop-blur-lg shadow-lg max-w-md mx-auto inset-x-0">
+<!-- Tab 1: Book Camperp (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_shipping">local_shipping</span>
+<span class="text-label-sm font-label-sm mt-0.5">Book Camperp</span>
+</a>
+<!-- Tab 2: Subscriptions (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_month">calendar_month</span>
+<span class="text-label-sm font-label-sm mt-0.5">Subscriptions</span>
+</a>
+<!-- Tab 3: My Orders (ACTIVE DESTINATION - Matches Live Order Tracking Intent) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-label-sm font-label-sm mt-0.5 font-bold">My Orders</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1.5 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-primary/60 backdrop-blur-sm p-0" id="delivered-receipt-modal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-xl max-h-[92vh] overflow-y-auto shadow-2xl border-t border-surface-variant flex flex-col">
+<!-- Drag handle indicator & Header -->
+<div class="sticky top-0 bg-surface-container-lowest/95 backdrop-blur-md px-4 pt-3 pb-2 border-b border-surface-variant/40 flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="text-title-md font-headline-sm font-semibold text-primary">Order Completed &amp; Handover Receipt</h2>
+</div>
+<button aria-label="Close modal" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-90" onclick="document.getElementById('delivered-receipt-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4">
+<!-- Celebration Delivery Banner -->
+<div class="bg-surface-container-low rounded-xl p-3.5 border border-secondary-container/50 flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md shrink-0">
+<span class="material-symbols-outlined text-[26px] font-bold">task_alt</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-1.5">
+<span class="text-title-md font-headline-sm font-bold text-primary">Delivered Successfully</span>
+<span class="text-[11px] font-label-sm font-bold bg-secondary-container/40 text-on-secondary-container px-2 py-0.5 rounded-full">On Time</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Delivered at 8:41 AM (1 min early) • Sarsawa Bypass</p>
+<p class="text-[11px] font-body-sm text-secondary font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Handover verified by Sonu Singh (Bolero Cargo)
+          </p>
+</div>
+</div>
+<!-- Purity & Batch Quality Certificate Stamp -->
+<div class="bg-surface-container-lowest rounded-xl p-3 border border-secondary/20 shadow-xs flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex-1 text-[12px] leading-tight font-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md font-bold text-primary">Shreeji Certified Batch #SA-402</span>
+<span class="text-[10px] font-label-sm text-secondary font-semibold bg-tertiary-fixed/30 px-1.5 py-0.5 rounded">100% Pure</span>
+</div>
+<p class="text-on-surface-variant mt-0.5 text-[11px]">TDS: <strong class="text-primary">90 PPM</strong> | Ozone Seal Verified Intact | 100% Food Grade HDPE</p>
+</div>
+</div>
+<!-- Digital Tax Invoice Card -->
+<div class="rounded-xl border border-surface-variant/50 p-3.5 bg-surface-container-lowest shadow-xs space-y-2.5">
+<div class="flex items-center justify-between border-b border-surface-variant/30 pb-2">
+<div>
+<span class="text-[11px] font-label-sm text-on-surface-variant block uppercase tracking-wide">Digital Tax Receipt</span>
+<span class="text-label-md font-headline-sm font-bold text-primary">INV-SA-2024-8492</span>
+</div>
+<div class="text-right">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-label-md font-bold bg-secondary-fixed/50 text-on-secondary-fixed">PAID • UPI</span>
+<span class="block text-[11px] font-body-sm text-on-surface-variant mt-0.5">Today, 8:41 AM</span>
+</div>
+</div>
+<!-- Itemized List -->
+<div class="space-y-2 pt-1 text-body-sm font-body-sm">
+<div class="flex items-start justify-between">
+<div>
+<p class="font-semibold text-primary">4x 20L Commercial Campers</p>
+<p class="text-[11px] text-on-surface-variant">Chilled Refill @ ₹30 / unit • Sadpur Facility</p>
+</div>
+<span class="font-semibold text-primary">₹120.00</span>
+</div>
+<div class="flex items-start justify-between py-1.5 px-2 rounded-lg bg-surface-container-low/70 border border-surface-variant/40">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync</span>
+<div>
+<p class="font-semibold text-primary text-[12px]">4 Empty Campers Exchanged</p>
+<p class="text-[10px] text-on-surface-variant">Empty bottles inspected &amp; collected</p>
+</div>
+</div>
+<span class="text-[12px] font-semibold text-secondary">₹0.00</span>
+</div>
+</div>
+<!-- Total Amount Row -->
+<div class="flex items-center justify-between pt-2 border-t border-surface-variant/40">
+<div class="flex items-center gap-1.5">
+<span class="text-title-md font-headline-sm font-bold text-primary">Total Paid</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">₹120.00</span>
+</div>
+</div>
+<!-- Handover Location Acknowledgement -->
+<div class="bg-surface-container-low p-2.5 rounded-lg border border-surface-variant/30 flex items-start gap-2 text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">pin_drop</span>
+<div>
+<span class="font-semibold text-primary text-[12px] block">Handed over to Destination</span>
+<span class="text-on-surface-variant text-[11px]">Shop #14, Sarsawa Bypass Road. Left safely at front counter by water dispenser.</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="space-y-2 pt-1 pb-1">
+<button class="w-full py-3 px-4 bg-primary hover:bg-secondary text-on-primary rounded-xl font-label-lg font-bold flex items-center justify-center gap-2 shadow-md transition-all active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download Tax Receipt (PDF)</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 bg-surface-container-low hover:bg-surface-container border border-surface-variant/50 rounded-xl font-label-md font-semibold text-primary flex items-center justify-center gap-1.5 transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Rate Delivery</span>
+</button>
+<button class="py-2.5 px-3 bg-secondary-container hover:bg-secondary hover:text-on-secondary rounded-xl font-label-md font-semibold text-on-secondary-container flex items-center justify-center gap-1.5 transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">repeat</span>
+<span>Repeat Order</span>
+</button>
+</div>
+<button class="w-full text-center py-1.5 text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" onclick="document.getElementById('delivered-receipt-modal').classList.add('hidden')" type="button">
+          Back to Live Tracking Details
+        </button>
+</div>
+</div>
+</div>
+</div></main>
+</body></html>

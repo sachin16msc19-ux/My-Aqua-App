@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monthly GST Tax Invoice - Shreeji Aqua B2B</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "on-surface-variant": "#43474d",
+            "inverse-surface": "#2c3134",
+            "inverse-on-surface": "#ecf1f4",
+            "primary-container": "#0a2540",
+            "on-secondary-fixed": "#001f27",
+            "inverse-primary": "#b0c8eb",
+            "on-error": "#ffffff",
+            "surface-container-highest": "#dee3e6",
+            "primary": "#000f22",
+            "tertiary-container": "#002a25",
+            "primary-fixed": "#d2e4ff",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#5bdac9",
+            "error": "#ba1a1a",
+            "surface-bright": "#f5fafd",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#50d9fe",
+            "surface": "#f5fafd",
+            "surface-dim": "#d6dbde",
+            "on-secondary-fixed-variant": "#004e5f",
+            "secondary-fixed-dim": "#4cd6fb",
+            "surface-variant": "#dee3e6",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#768dad",
+            "on-surface": "#171c1f",
+            "surface-tint": "#49607e",
+            "surface-container-high": "#e4e9ec",
+            "on-tertiary-container": "#009d8e",
+            "surface-container": "#eaeff2",
+            "outline": "#74777e",
+            "tertiary-fixed": "#7af7e5",
+            "on-tertiary-fixed-variant": "#005048",
+            "on-secondary-container": "#005c70",
+            "on-primary-fixed": "#001c37",
+            "on-primary-fixed-variant": "#314865",
+            "surface-container-low": "#eff4f7",
+            "secondary": "#00677d",
+            "background": "#f5fafd",
+            "primary-fixed-dim": "#b0c8eb",
+            "outline-variant": "#c4c6ce",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "on-background": "#171c1f",
+            "tertiary": "#001210",
+            "on-tertiary-fixed": "#00201c",
+            "secondary-fixed": "#b3ebff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-sm": "1rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "space-sm": "0.5rem",
+            "gutter-sm": "1rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-mobile": ["Space Grotesk"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-md": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "display-mobile": ["38px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+            "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-surface-container-lowest text-primary docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center w-full px-space-md py-space-sm max-w-7xl mx-auto">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Go Back" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform duration-150 text-primary" type="button">
+<span class="material-symbols-outlined text-title-lg">arrow_back</span>
+</button>
+<div>
+<span class="text-title-lg font-title-lg font-bold text-primary block leading-tight">Shreeji Aqua B2B</span>
+<span class="text-label-sm font-label-sm text-secondary tracking-wider block">SARSAWA WATER HUB</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Share Invoice" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform duration-150 text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-title-lg">share</span>
+</button>
+<button aria-label="Invoice Archive" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform duration-150 text-primary" type="button">
+<span class="material-symbols-outlined text-title-lg">receipt_long</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Mobile Canvas Container -->
+<main class="max-w-md mx-auto px-space-md pt-space-md pb-40 space-y-space-md">
+<!-- Screen Title & Invoice Identifier Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-surface-container space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Original For Recipient
+        </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-label-md font-label-md">
+<span class="material-symbols-outlined text-title-md text-secondary">verified</span>
+<span>GST Rule 46</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<h1 class="font-headline-sm text-headline-sm text-primary">Monthly GST Tax Invoice</h1>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Billing Period: 01 Oct 2024 – 31 Oct 2024</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-2 border-t border-surface-container gap-2">
+<div class="bg-surface-container-low px-2.5 py-1 rounded-lg">
+<span class="text-label-sm font-label-sm text-on-surface-variant">INVOICE NO:</span>
+<span class="font-label-md text-label-md font-bold text-primary ml-1">#INV-2024-OCT-094</span>
+</div>
+<div class="bg-surface-container-low px-2.5 py-1 rounded-lg">
+<span class="text-label-sm font-label-sm text-on-surface-variant">DATE:</span>
+<span class="font-label-md text-label-md font-bold text-primary ml-1">31-Oct-2024</span>
+</div>
+</div>
+</div>
+<!-- Purity & Live Status Banner -->
+<div class="rounded-xl p-space-md bg-gradient-to-r from-primary-container to-primary text-surface-bright relative overflow-hidden shadow-sm">
+<div class="absolute -right-4 -bottom-6 w-32 h-32 rounded-full bg-secondary opacity-20 blur-xl pointer-events-none"></div>
+<div class="relative z-10 space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary-fixed text-label-md font-label-md">
+<span class="material-symbols-outlined text-title-md">schedule</span>
+<span>Payment Due: Nov 05, 2024</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm font-semibold">
+            5 Days Remaining
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<div class="text-label-sm font-label-sm text-on-primary-container">ACCOUNT TERMS</div>
+<div class="font-title-md text-title-md text-surface-container-lowest">Net-15 B2B Commercial Account</div>
+</div>
+<div class="text-right">
+<div class="text-label-sm font-label-sm text-on-primary-container">STATUS</div>
+<div class="font-label-md text-label-md text-secondary-fixed-dim font-bold flex items-center justify-end gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+              Awaiting Clearance
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Entity Cards: Supplier & Billed To (Bento Layout) -->
+<div class="space-y-space-sm">
+<!-- Supplier Entity Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-container shadow-sm space-y-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-title-md">water_drop</span>
+<span class="font-label-md text-label-md font-bold text-primary uppercase">Supplier Entity</span>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Central Bottling Unit</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-primary">Shreeji Aqua Enterprises</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sarsawa-Sadpur Bypass Corridor, Sarsawa Industrial Zone, Saharanpur, UP - 247232</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant block">GSTIN</span>
+<span class="font-bold text-primary font-headline-sm text-label-md tracking-wider">09AAQCS8492C1Z4</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant block">FSSAI Lic. No.</span>
+<span class="font-bold text-primary font-headline-sm text-label-md">12721066000412</span>
+</div>
+</div>
+</div>
+<!-- Billed To (Client) Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-container shadow-sm space-y-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-title-md">storefront</span>
+<span class="font-label-md text-label-md font-bold text-primary uppercase">Billed To (Client)</span>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Client ID: #SA-DH-142</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-primary">Highway King Family Dhaba &amp; Restaurant</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shop #14, Sarsawa NH-344 Bypass Road, District Saharanpur, UP</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant block">CLIENT GSTIN</span>
+<span class="font-bold text-primary font-headline-sm text-label-md tracking-wider">09ABCDE1234F1Z8</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant block">COMMERCIAL TARIFF</span>
+<span class="font-bold text-primary font-headline-sm text-label-md">Highway Tier-1 Rate</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Monthly Operational & Purity Metrics -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-container shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary uppercase tracking-wide">Monthly Dispatch Metrics</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">31 Days Active Log</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-sm font-label-sm">20L Campers</span>
+<span class="material-symbols-outlined text-secondary text-title-md">local_shipping</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">124</span>
+<span class="text-body-sm text-body-sm text-on-surface-variant ml-1">units</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary mt-1 block">PUF Insulated Double Tank</span>
+</div>
+<!-- Metric 2 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-sm font-label-sm">Empty Reconciled</span>
+<span class="material-symbols-outlined text-secondary text-title-md">sync</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">124/124</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant mt-1 block font-semibold">0 Empty Pending</span>
+</div>
+<!-- Metric 3 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-sm font-label-sm">PET 1L Packaged</span>
+<span class="material-symbols-outlined text-secondary text-title-md">inventory_2</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">15</span>
+<span class="text-body-sm text-body-sm text-on-surface-variant ml-1">cases</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-1 block">180 Bottles Packaged</span>
+</div>
+<!-- Metric 4 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-sm font-label-sm">Average Purity</span>
+<span class="material-symbols-outlined text-secondary text-title-md">check_circle</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">89</span>
+<span class="text-body-sm text-body-sm text-on-surface-variant ml-1">PPM TDS</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary mt-1 block font-semibold">WHO Mineral Standard</span>
+</div>
+</div>
+<!-- Water Quality Spectrum Meter -->
+<div class="p-3 rounded-xl bg-surface-bright border border-surface-container space-y-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="font-bold text-primary">Lab Quality Index (Plant Batch #398-414)</span>
+<span class="text-secondary font-semibold">pH 7.35 • Pure Balanced</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-secondary-container via-secondary to-primary-container rounded-full" style="width: 82%;"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-label-sm">
+<span>50 PPM (Oligomineral)</span>
+<span class="text-primary font-bold">Current Batch: 89 PPM</span>
+<span>150 PPM (Permissible Max)</span>
+</div>
+</div>
+</div>
+<!-- Itemized GST Tax Computation Table -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-container shadow-sm overflow-hidden">
+<div class="p-space-md border-b border-surface-container bg-surface-container-low flex justify-between items-center">
+<div>
+<span class="font-label-md text-label-md font-bold text-primary uppercase">Itemized Tax Computation</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Harmonized System Nomenclature (HSN)</p>
+</div>
+<span class="material-symbols-outlined text-secondary">account_balance</span>
+</div>
+<!-- Line Item 1 -->
+<div class="p-space-md border-b border-surface-container space-y-2">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5 pr-2">
+<h3 class="font-title-md text-title-md text-primary">20L Commercial Insulated Camper Water Refill</h3>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>HSN: 22019010</span>
+<span>•</span>
+<span class="text-secondary font-semibold">Basic Treated Water</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-lg text-title-lg font-bold text-primary">₹3,720.00</span>
+</div>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<span>Qty: 124 Campers × ₹30.00 / refill</span>
+<span class="font-semibold text-primary">GST: Nil (0% Exempt)</span>
+</div>
+</div>
+<!-- Line Item 2 -->
+<div class="p-space-md border-b border-surface-container space-y-2">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5 pr-2">
+<h3 class="font-title-md text-title-md text-primary">Shreeji Aqua 1L Packaged Mineral Bottles</h3>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>HSN: 22011010</span>
+<span>•</span>
+<span>15 Cases (180 Units)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-lg text-title-lg font-bold text-primary">₹1,500.00</span>
+</div>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<span>Qty: 15 cases @ ₹100.00</span>
+<span class="font-semibold text-primary">18% GST (₹270.00)</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-label-sm font-label-sm pt-0.5 text-on-surface-variant">
+<div class="flex justify-between bg-surface-container-lowest border border-surface-container px-2 py-1 rounded">
+<span>CGST 9%</span>
+<span class="font-bold text-primary">₹135.00</span>
+</div>
+<div class="flex justify-between bg-surface-container-lowest border border-surface-container px-2 py-1 rounded">
+<span>SGST 9%</span>
+<span class="font-bold text-primary">₹135.00</span>
+</div>
+</div>
+</div>
+<!-- Line Item 3 -->
+<div class="p-space-md border-b border-surface-container space-y-2">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5 pr-2">
+<h3 class="font-title-md text-title-md text-primary">Corridor Route Logistics &amp; Sanitization Surcharge</h3>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>SAC: 996511</span>
+<span>•</span>
+<span>NH-344 Scheduled Logistics</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-lg text-title-lg font-bold text-primary">₹300.00</span>
+</div>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<span>Flat Monthly Route Maintenance</span>
+<span class="font-semibold text-primary">18% GST (₹54.00)</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-label-sm font-label-sm pt-0.5 text-on-surface-variant">
+<div class="flex justify-between bg-surface-container-lowest border border-surface-container px-2 py-1 rounded">
+<span>CGST 9%</span>
+<span class="font-bold text-primary">₹27.00</span>
+</div>
+<div class="flex justify-between bg-surface-container-lowest border border-surface-container px-2 py-1 rounded">
+<span>SGST 9%</span>
+<span class="font-bold text-primary">₹27.00</span>
+</div>
+</div>
+</div>
+<!-- Tax Computation Summary -->
+<div class="p-space-md bg-surface-bright space-y-2">
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Total Taxable Base Value</span>
+<span class="font-semibold text-primary">₹5,520.00</span>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Central GST (CGST Total)</span>
+<span class="font-semibold text-primary">₹162.00</span>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>State GST (SGST Total)</span>
+<span class="font-semibold text-primary">₹162.00</span>
+</div>
+<div class="flex justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Rounding Adjustment</span>
+<span class="font-semibold text-primary">-₹0.00</span>
+</div>
+<div class="pt-3 border-t border-surface-container-highest flex justify-between items-baseline">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Net Total Payable</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Rupees Five Thousand Eight Hundred Forty-Four Only</p>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">₹5,844.00</span>
+</div>
+<div class="mt-3 p-2.5 rounded-lg bg-secondary-fixed/30 border border-secondary-fixed flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-title-md">shield</span>
+<span class="text-label-sm font-label-sm font-semibold">Security Container Deposit</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-primary">₹600.00 in Safe Custody</span>
+</div>
+</div>
+</div>
+<!-- Daily Supply Log Expansion (Weekly Summaries) -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-container shadow-sm p-space-md space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-title-md">calendar_month</span>
+<span class="font-label-md text-label-md font-bold text-primary uppercase">Delivery Manifest Breakdown</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">4 Delivery Cycles</span>
+</div>
+<div class="space-y-2">
+<!-- Week 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-bold text-primary">Week 1 (Oct 01 – 07)</div>
+<div class="text-body-sm text-body-sm text-on-surface-variant">Driver: Sonu Singh • Route Van #UP11-T-8412</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-primary">28 Campers</div>
+<div class="text-label-sm font-label-sm text-secondary">3 Cases PET</div>
+</div>
+</div>
+<!-- Week 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-bold text-primary">Week 2 (Oct 08 – 14)</div>
+<div class="text-body-sm text-body-sm text-on-surface-variant">Driver: Amit Saini • Route Van #UP11-T-8412</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-primary">30 Campers</div>
+<div class="text-label-sm font-label-sm text-secondary">4 Cases PET</div>
+</div>
+</div>
+<!-- Week 3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-primary">Week 3 (Oct 15 – 21)</span>
+<span class="text-[10px] font-bold px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container">Festive Rush</span>
+</div>
+<div class="text-body-sm text-body-sm text-on-surface-variant">Driver: Sonu Singh • Double Shift</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-primary">34 Campers</div>
+<div class="text-label-sm font-label-sm text-secondary">5 Cases PET</div>
+</div>
+</div>
+<!-- Week 4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-bold text-primary">Week 4 (Oct 22 – 31)</div>
+<div class="text-body-sm text-body-sm text-on-surface-variant">Driver: Amit Saini • Regular Run</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-primary">32 Campers</div>
+<div class="text-label-sm font-label-sm text-secondary">3 Cases PET</div>
+</div>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-title-md text-secondary">verified_user</span>
+<span>Camper batch seal serial SA-398 to SA-414 checked upon physical delivery.</span>
+</div>
+</div>
+<!-- Settlement Options & Banking Information -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-container shadow-sm p-space-md space-y-space-md">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container">
+<span class="font-label-md text-label-md font-bold text-primary uppercase">Payment Settlement</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">Zero Surcharge UPI</span>
+</div>
+<!-- Quick UPI QR Block -->
+<div class="flex items-center gap-space-md p-3 rounded-xl bg-surface-container-low border border-surface-container">
+<div class="w-20 h-20 bg-surface-container-lowest border-2 border-primary-container p-1 rounded-lg flex items-center justify-center shrink-0">
+<!-- Abstract SVG-based Clean QR Code placeholder -->
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm8-2h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2zm2-2h2v2h-2v-2zm0 4h2v2h-2v-2zm-2 2h2v2h-2v-2zm-4 0h2v2h-2v-2z"></path>
+</svg>
+</div>
+<div class="space-y-1">
+<div class="text-label-sm font-label-sm text-on-surface-variant">CORPORATE VPA / UPI ID</div>
+<div class="font-label-md text-label-md font-bold text-primary select-all">shreejiaqua@pnb</div>
+<div class="flex items-center gap-1 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md text-secondary">flash_on</span>
+<span>Scan via GPay, PhonePe, Paytm or BHIM</span>
+</div>
+</div>
+</div>
+<!-- Bank Transfer Details -->
+<div class="space-y-1.5 text-body-sm text-body-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant uppercase">Direct NEFT / RTGS Transfer</span>
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container space-y-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Beneficiary:</span>
+<span class="font-bold text-primary">Shreeji Aqua Enterprises</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Bank Name:</span>
+<span class="font-bold text-primary">Punjab National Bank</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Branch:</span>
+<span class="text-primary font-medium">Sarsawa Town Branch</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Account No:</span>
+<span class="font-headline-sm text-label-md font-bold text-primary tracking-wider">0422002100089140</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">IFSC Code:</span>
+<span class="font-headline-sm text-label-md font-bold text-primary tracking-wider">PUNB0042200</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Signatory & Legal Disclaimer -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-surface-container text-center space-y-2">
+<div class="text-label-sm font-label-sm text-on-surface-variant">
+        This is a digitally certified GST Tax Invoice generated by Shreeji Aqua ERP systems under UP GST E-Invoicing mandate.
+      </div>
+<div class="pt-2 flex items-center justify-center gap-2 text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-secondary text-title-md">verified</span>
+<span>Digitally Authorized Signatory • Sarsawa Plant</span>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Floating Action Bar for Invoices -->
+<aside aria-label="Invoice Settlement Actions" class="fixed bottom-14 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-md border-t border-surface-container p-space-sm shadow-lg">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<button class="flex-1 py-3 px-4 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-title-md">download</span>
+<span>Download PDF</span>
+</button>
+<button class="flex-1 py-3 px-4 rounded-lg bg-primary-container hover:bg-secondary text-surface-container-lowest font-headline-sm text-label-md font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-title-md text-secondary-container">credit_card</span>
+<span>Pay ₹5,844.00</span>
+</button>
+</div>
+</aside>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-sm py-space-xs bg-surface-container-lowest shadow-lg">
+<!-- Destination 1: Orders -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150" href="#orders">
+<span class="material-symbols-outlined text-title-lg">local_shipping</span>
+<span class="text-label-md font-label-md">Orders</span>
+</a>
+<!-- Destination 2: Water Refill -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150" href="#refill">
+<span class="material-symbols-outlined text-title-lg">water_drop</span>
+<span class="text-label-md font-label-md">Water Refill</span>
+</a>
+<!-- Destination 3: Invoices (ACTIVE DESTINATION) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-space-md py-space-xs font-semibold hover:bg-surface-container-low active:scale-95 transition-transform duration-150" href="#invoices">
+<span class="material-symbols-outlined text-title-lg" style="font-variation-settings: 'FILL' 1;">receipt</span>
+<span class="text-label-md font-label-md">Invoices</span>
+</a>
+<!-- Destination 4: Account -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150" href="#account">
+<span class="material-symbols-outlined text-title-lg">storefront</span>
+<span class="text-label-md font-label-md">Account</span>
+</a>
+</nav>
+</body></html>

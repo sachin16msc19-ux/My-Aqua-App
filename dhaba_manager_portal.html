@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shreeji Aqua B2B - Dhaba Manager Portal</title>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#b0c8eb",
+            "surface": "#f5fafd",
+            "surface-tint": "#49607e",
+            "on-tertiary-fixed": "#00201c",
+            "on-surface-variant": "#43474d",
+            "background": "#f5fafd",
+            "secondary-fixed-dim": "#4cd6fb",
+            "on-secondary-container": "#005c70",
+            "on-secondary": "#ffffff",
+            "outline": "#74777e",
+            "surface-container-highest": "#dee3e6",
+            "on-background": "#171c1f",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#002a25",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#5bdac9",
+            "surface-container-low": "#eff4f7",
+            "inverse-primary": "#b0c8eb",
+            "secondary-fixed": "#b3ebff",
+            "on-primary-fixed": "#001c37",
+            "on-primary-container": "#768dad",
+            "primary-container": "#0a2540",
+            "surface-container-high": "#e4e9ec",
+            "tertiary": "#001210",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#004e5f",
+            "surface-bright": "#f5fafd",
+            "outline-variant": "#c4c6ce",
+            "surface-variant": "#dee3e6",
+            "inverse-on-surface": "#ecf1f4",
+            "inverse-surface": "#2c3134",
+            "on-tertiary-fixed-variant": "#005048",
+            "surface-container": "#eaeff2",
+            "on-tertiary-container": "#009d8e",
+            "primary-fixed": "#d2e4ff",
+            "on-surface": "#171c1f",
+            "on-secondary-fixed": "#001f27",
+            "error-container": "#ffdad6",
+            "primary": "#000f22",
+            "surface-dim": "#d6dbde",
+            "tertiary-fixed": "#7af7e5",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#314865",
+            "secondary-container": "#50d9fe",
+            "secondary": "#00677d",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-sm": "1rem",
+            "gutter-sm": "1rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Space Grotesk"],
+            "title-md": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Space Grotesk"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "label-lg": ["Space Grotesk"],
+            "display-mobile": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col justify-between selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-28">
+<!-- ================= TOP APP BAR (Shared Component Execution) ================= -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 shadow-sm border-b border-surface-container">
+<div class="flex justify-between items-center w-full px-space-md py-space-sm max-w-7xl mx-auto">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Go back" class="p-1.5 rounded-lg hover:bg-surface-container active:scale-95 transition-transform text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-title-lg">arrow_back</span>
+</button>
+<div>
+<span class="text-title-lg font-title-lg font-bold text-primary tracking-tight">Shreeji Aqua B2B</span>
+<span class="block text-label-sm font-label-sm text-secondary font-semibold uppercase tracking-wider">Highway Dhaba Ops</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Invoices" class="p-1.5 rounded-lg hover:bg-surface-container active:scale-95 transition-transform text-primary flex items-center justify-center relative">
+<span class="material-symbols-outlined text-title-lg">receipt_long</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary-container"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="w-full max-w-md mx-auto px-4 pt-3 space-y-4">
+<!-- 1. Client Identity & Plant Live Status Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-surface-container-highest shadow-sm relative overflow-hidden">
+<!-- Ambient water tint background glow -->
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex justify-between items-start mb-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">storefront</span>
+<h1 class="text-title-md font-title-md text-primary font-bold">Highway King Dhaba</h1>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+            Account #SA-DH-142 • Sarsawa NH-344 Bypass
+          </p>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed border border-secondary/20">
+          Tier-1 Commercial
+        </span>
+</div>
+<!-- Month Selector & Comparison Pill -->
+<div class="flex items-center justify-between mt-3 pt-2.5 border-t border-surface-container">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded-lg border border-outline-variant/40 cursor-pointer active:scale-95 transition-transform">
+<span class="text-label-md font-label-md text-primary font-semibold">October 2024</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+18% vs Sept (Festive Rush)</span>
+</div>
+</div>
+<!-- Plant Alert Badge / Water Purity Metric -->
+<div class="mt-3 flex items-center justify-between bg-primary-container text-surface-bright px-3 py-2 rounded-lg text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span>Sarsawa RO Unit Line: Active</span>
+</div>
+<div class="flex items-center gap-1 text-secondary-fixed font-label-sm">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+<span>88 PPM Avg TDS</span>
+</div>
+</div>
+</div>
+<!-- 2. Executive Consumption & Cost KPI Cards (2x2 Bento Grid) -->
+<section>
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-title-md font-title-md text-primary font-bold">Monthly Key Metrics</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Oct 1 - Oct 31</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1: Total Volume -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="text-label-sm font-label-sm">Total Campers</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">local_drink</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">124</p>
+<div class="mt-1 flex items-center text-label-sm font-label-sm text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">opacity</span>
+<span>2,480 Liters chilled</span>
+</div>
+</div>
+<!-- Metric 2: Negotiated Rate -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="text-label-sm font-label-sm">Contract Rate</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">₹30.00</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">
+<span class="text-on-tertiary-container font-semibold">Tier-1 Contract</span> (Mkt ₹40)
+          </p>
+</div>
+<!-- Metric 3: Total Monthly Spend -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="text-label-sm font-label-sm">Water Spend</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">₹3,720.00</p>
+<p class="text-label-sm font-label-sm text-outline mt-1 truncate">Excl. 1L PET crates</p>
+</div>
+<!-- Metric 4: Camper Inventory Health -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="text-label-sm font-label-sm">Empties Deposit</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">inventory_2</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">4 in Hand</p>
+<div class="mt-1 flex items-center text-label-sm font-label-sm text-on-tertiary-container font-semibold gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>₹0 Late Penalties</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Weekly Consumption Breakdown (Interactive Bar Chart Visualizer) -->
+<section class="bg-surface-container-lowest p-4 rounded-xl border border-surface-container-highest shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<div>
+<h3 class="text-title-md font-title-md text-primary font-bold">Weekly Dhaba Inflow</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Highway traffic volume correlation</p>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary bg-surface-container-low px-2 py-1 rounded-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Oct 2024
+        </span>
+</div>
+<!-- Custom Pure CSS/Tailwind Bar Chart -->
+<div class="space-y-3 pt-1">
+<!-- Week 1 -->
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="font-medium text-primary">Week 1 (Oct 1–7)</span>
+<span class="text-on-surface-variant"><strong class="text-primary font-label-md">28</strong> Campers (4.0 / day)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-500" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Week 2 -->
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="font-medium text-primary">Week 2 (Oct 8–14)</span>
+<span class="text-on-surface-variant"><strong class="text-primary font-label-md">30</strong> Campers (4.3 / day)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-500" style="width: 84%;"></div>
+</div>
+</div>
+<!-- Week 3 (Peak) -->
+<div class="p-2 -mx-2 bg-surface-container-low/60 rounded-lg border border-secondary-container/50">
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<div class="flex items-center gap-1 text-primary font-semibold">
+<span>Week 3 (Oct 15–21)</span>
+<span class="bg-secondary-container text-on-secondary-container text-[9px] px-1 py-0.2 rounded font-bold uppercase">Peak</span>
+</div>
+<span class="text-on-secondary-container font-semibold"><strong class="text-primary font-label-md">34</strong> Campers (4.9 / day)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 98%;"></div>
+</div>
+<span class="text-[11px] text-secondary font-medium mt-1 block">Festive Weekend rush on Saharanpur-Ambala corridor</span>
+</div>
+<!-- Week 4 -->
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="font-medium text-primary">Week 4 (Oct 22–31)</span>
+<span class="text-on-surface-variant"><strong class="text-primary font-label-md">32</strong> Campers (3.2 / day)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-500" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+<!-- Traffic Insight Footnote -->
+<div class="mt-3.5 pt-2.5 border-t border-surface-container flex items-start gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">insights</span>
+<p>Peak daily usage concentrated on Saturday &amp; Sunday evenings during 8 PM – 11 PM Highway diner arrivals.</p>
+</div>
+</section>
+<!-- 4. Cost per Camper Breakdown & Unit Economics Savings Card -->
+<section class="bg-surface-container-lowest p-4 rounded-xl border border-surface-container-highest shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">pie_chart</span>
+<h3 class="text-title-md font-title-md text-primary font-bold">Dhaba Unit Economics</h3>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-bold">
+          High Margin Efficiency
+        </span>
+</div>
+<!-- Unit breakdown items -->
+<div class="divide-y divide-surface-container text-body-sm font-body-sm">
+<div class="py-1.5 flex justify-between items-center">
+<span class="text-on-surface-variant">Base 20L RO Water Refill</span>
+<span class="font-label-md text-primary font-semibold">₹30.00</span>
+</div>
+<div class="py-1.5 flex justify-between items-center">
+<span class="text-on-surface-variant">Delivery &amp; UV Tank Sanitization</span>
+<span class="text-label-md font-label-md text-on-tertiary-container font-semibold">FREE (100+ Tier)</span>
+</div>
+<div class="py-1.5 flex justify-between items-center">
+<span class="text-on-surface-variant">Customer Glass Yield (~80 glasses @ 250ml)</span>
+<span class="font-label-md text-primary font-semibold">₹0.37 / glass</span>
+</div>
+</div>
+<!-- Commercial Savings highlight banner -->
+<div class="bg-secondary-fixed/30 border border-secondary/20 p-3 rounded-lg flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant uppercase tracking-wider block font-bold">Contract Benefit</span>
+<span class="text-body-sm font-body-sm text-primary font-bold">Saved ₹1,240 vs Retail Spot Rate</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]">savings</span>
+</div>
+</section>
+<!-- 5. Peak Demand Forecast & Emergency Auto-Refill Card -->
+<section class="bg-surface-container-lowest p-4 rounded-xl border border-surface-container-highest shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="text-title-md font-title-md text-primary font-bold">Peak Rush Refill Safeguard</h3>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</div>
+<!-- Rush windows -->
+<div class="grid grid-cols-2 gap-2 text-label-sm font-label-sm">
+<div class="p-2 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="text-on-surface-variant block">Lunch Corridor</span>
+<strong class="text-primary font-label-md">1:00 PM – 3:30 PM</strong>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="text-on-surface-variant block">Highway Dinner Rush</span>
+<strong class="text-primary font-label-md">8:00 PM – 11:30 PM</strong>
+</div>
+</div>
+<!-- Refill Alert Pill -->
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-high/60 border border-outline-variant/30 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+<span>Forecasted Low Stock by <strong class="text-primary">Sunday 6:00 PM</strong> at current consumption rate.</span>
+</div>
+<!-- One-Tap Emergency Button (Primary CTA as per Design System) -->
+<button class="w-full bg-primary-container text-surface-container-lowest py-3 px-4 rounded-lg font-headline-sm text-title-md flex items-center justify-center gap-2 shadow-md hover:bg-secondary active:scale-[0.98] transition-all duration-150">
+<span class="material-symbols-outlined text-[20px]">flash_on</span>
+<span>Dispatch Emergency +4 Campers</span>
+</button>
+<p class="text-[11px] text-center text-outline">Priority dispatch via Sarsawa Plant Line (Avg arrival: 18 mins)</p>
+</section>
+<!-- 6. Management Tools & Dispatch Contact -->
+<section class="space-y-2 mb-4">
+<h3 class="text-title-md font-title-md text-primary font-bold px-1">Dhaba Management Tools</h3>
+<!-- Modify Daily Standing Quota -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+</div>
+<div>
+<span class="text-title-md font-title-md text-primary block leading-tight">Daily Standing Quota</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Currently: 4 Campers / day (Morning 8 AM)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<!-- Download Consumption Report -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">download_for_offline</span>
+</div>
+<div>
+<span class="text-title-md font-title-md text-primary block leading-tight">Monthly Consumption Ledger</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Download official GST Invoice &amp; CSV</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<!-- Contact Sarsawa Dispatcher -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-highest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<div>
+<span class="text-title-md font-title-md text-primary block leading-tight">Sonu Singh (Plant Dispatch)</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sarsawa Industrial Area Unit</span>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-md bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md font-bold flex items-center gap-1 active:scale-95 transition-transform" href="tel:9876543210">
+          Call Plant
+        </a>
+</div>
+</section>
+</main>
+<!-- ================= BOTTOM NAVIGATION (Shared Component Execution) ================= -->
+<!-- Contextual Semantic Mapping: Active destination matches current focus "Orders" (Consumption/Supply Manifests) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-sm py-space-xs bg-surface-container-lowest shadow-lg border-t border-surface-container">
+<!-- Tab 1: Orders (Active - reflects current dhaba consumption & orders canvas) -->
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-space-md py-space-xs font-semibold active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-title-lg">local_shipping</span>
+<span class="text-label-md font-label-md">Orders</span>
+</button>
+<!-- Tab 2: Water Refill (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-title-lg">water_drop</span>
+<span class="text-label-md font-label-md">Water Refill</span>
+</button>
+<!-- Tab 3: Invoices (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-title-lg">receipt</span>
+<span class="text-label-md font-label-md">Invoices</span>
+</button>
+<!-- Tab 4: Account (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-title-lg">storefront</span>
+<span class="text-label-md font-label-md">Account</span>
+</button>
+</nav>
+</body></html>
